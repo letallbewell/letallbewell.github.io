@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Mathew Alex</title>
+    <link>https://letallbewell.github.io/</link>
+    <description>Recent content in About on Mathew Alex</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Aug 2022 15:23:02 +0530</lastBuildDate><atom:link href="https://letallbewell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research</title>
+      <link>https://letallbewell.github.io/docs/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://letallbewell.github.io/docs/research/</guid>
+      <description>Research Interests # In progress See the GitHub links for a bit more technical details. Tensor Networks, Renormalization, and Phase Transitions # [GitHub]
+Cosmology # We would not be here if not for dark matter. Matter cannot aggregate gravitationally to form structures due to radiation pressure until the universe could cool down considerably. However, dark matter interacts gravitationally alone so that it could form bound structures and form gravitational potential buckets for matter to fall in later when the universe cooled down.</description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://letallbewell.github.io/docs/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://letallbewell.github.io/docs/resources/</guid>
+      <description>Resources # In progress
+Links, my personal reviews, more resources, and my notes will be added soon. Physics # General # The Feynman Lectures Volume I,II, and III.
+Fundamentals of Physics 10th Edition by David Halliday, Robert Resnick, Jearl Walker
+David Skinner: Mathematical Methods
+Mathematical Methods for Physics and Engineering: A Comprehensive Guide 3rd Edition by K. F. Riley
+Classical Mechanics # David Tong: Lectures on Dynamics and Relativity</description>
+    </item>
+    
+    <item>
+      <title>Fun</title>
+      <link>https://letallbewell.github.io/docs/fun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://letallbewell.github.io/docs/fun/</guid>
+      <description>Fun! # Drawings # I have a penchant to draw in notebooks! A random collection from my old notebooks spanning many years. I am no Picasso but it relieves stress.
+Photos # Cool things I saw when I happened to have a phone.
+Make and Fly Cheap RC Airplanes # I am a massive fan of all flying things (lately disenchanted from jet engines due to environmental concerns), especially birds.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://letallbewell.github.io/docs/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://letallbewell.github.io/docs/contact/</guid>
+      <description>Contact # Would you like to discuss anything you found on my website or anything under the sun you are passionate about?
+Please reach out to me via email at mathewalex1908{at}gmail{dot}com else try Twitter or LinkedIn.</description>
+    </item>
+    
+  </channel>
+</rss>
