@@ -14,7 +14,7 @@
       
       <guid>https://letallbewell.github.io/research/</guid>
       <description>Research Interests # In progress See the GitHub links for a bit more technical details. Tensor Networks, Renormalization, and Phase Transitions # [GitHub]
-Cosmology # We would not be here if not for dark matter. Matter cannot aggregate gravitationally to form structures due to radiation pressure until the universe could cool down considerably. However, dark matter interacts gravitationally alone so that it could form bound structures and form gravitational potential buckets for matter to fall in later when the universe cooled down.</description>
+Tensor Networks are a new computational tool that finds applications in quantum many body physics and machine learning. Among many of its applications it allows to efficiently parametrize high dimensional Hilbert spaces of quantum sytems of interests and also provides a computationally tractable representation of partition functions involving lattice Hamiltoniancs (see Ising Model for an application to the Ising Hamiltonian using the Google&amp;rsquo;s Tensor Network library).</description>
     </item>
     
     <item>
