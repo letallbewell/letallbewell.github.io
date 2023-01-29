@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathew Alex | Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <script src="myscripts.js"></script>
+
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-DPXR8GLHEJ');
+    </script>
+</head>
+<body>
+    <h1>Mathew Alex</h1>
+
+    <a href="index.html">About me</a> &nbsp;
+    <a href="Research.html">Research</a> &nbsp;
+    <a href="Resources.html">Resources</a> &nbsp;
+    <a href="Fun.html">Fun</a> &nbsp;
+    <a href="Contact.html">Contact</a> &nbsp;
+
+    <hr style="width:100%;">
+
+    <h2>Research Interests</h2>
+
+
+    <mark> <b>In progress</b> </mark> 
+    </br>
+    <mark> <b>See the GitHub links for a bit more technical details.</b> </mark>
+    </br>
+
+    
+    <h3>
+    Tensor Networks, Renormalization, and Phase Transitions
+    <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button">Github</button> <br>
+    </h3> 
+    
+    Tensor Networks are a new computational tool that finds applications in quantum many-body physics and machine learning. Among many of its applications, it allows for efficiently parametrizing high dimensional Hilbert spaces of quantum systems of interest and also provides a computationally tractable representation of partition functions involving lattice Hamiltonians (see <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for an application to the Ising Hamiltonian using the Google's Tensor Network library).
+    
+    The network can be thought of as a graph representation of a complicated array contraction, like a long series of matrix multiplication. Since contraction is associative, the order does not make a difference to the answer but the computational cost heavily relies on the order. Finding the optimal order is a discrete optimization problem(tough), and renormalization approaches can iteratively simplify the graph to give approximate answers.
+    
+    The following tensor network contraction gives the partition function for the Ising Hamiltonian on a  lattice with periodic boundary conditions (larger networks failed to contract on my laptop).
+    <br>
+
+    <img src="images/TN_contraction.jpg" alt="Naive contraction" class="center">
+    
+    We can see that the code works by checking the thermodynamic variables (these results are exact).
+
+    <br>
+    <img src="images/TN_E&Cv.jpg" alt="Energy and Specific Heat Capacity" class="center">
+    <br>
+
+    Results can be compared against a Monte Carlo simulation. See <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for the results of an \( 8\times8 \) lattice:
+
+    <br>
+    <img src="images/MC_Samples.jpg" alt="Energy and Specific Heat Capacity" class="center">
+    </b>
+    </b>
+    <img src="images/MC_Results.jpg" alt="Energy and Specific Heat Capacity" class="center">
+    </b>
+
+    
+    
+    <h3> Cosmology </h3>
+    
+    </b>
+    <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center">
+    </b>
+    
+    We would not be here if not for dark matter. Matter cannot aggregate gravitationally to form structures due to radiation pressure until the universe can cool down considerably. However, dark matter interacts gravitationally alone so that it could form bound structures and form gravitational potential buckets for the matter to fall in later when the universe cooled down. Stars later lighted up the 'dark' dark matter haloes!
+    
+    Understanding the nature of primordial fluctuations, the seed of all structures in the universe, is a fundamental problem in modern physics. One tool to study this is the N-body simulation codes like the <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connects these fluctuations to present-day large-scale structures.
+    <br>
+
+    <center>
+    <iframe width="70%" height="700" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </center>
+
+    
+    
+    
+    <h3>
+    Fluid Dynamics 
+    <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button">Github</button> <br>
+    </h3>
+
+    
+    The Navier-Stokes equations (mass, momentum, and energy continuity. equations in fluids) can describe everything from stirring a cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Most algorithms require massive parallelization, and there are many pesky numerical instabilities in simulations. 
+    
+    I studied the driven lid cavity problem (think of a 2D box stirred from the top edge) for my MSc thesis using the Lattice Boltzmann method (LBM). LBM is a numerical scheme stemming from kinetic theory using a discretized version of the Boltzmann equation with an ad-hoc collision operator defined to emulate fluid behavior. Since it only uses array movements and arithmetic operations, LBM is economical in the low Reynolds number regime where the LBM approximation is more faithful.
+    <br><br>
+
+    <div class="row">
+        <div class="column">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/4Aa55GaYGbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="column">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/pkpIo9ZMNyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <center>
+        <iframe width="70%" height="700" src="https://www.youtube.com/embed/talJ0ecWuJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </center>
+    
+    
+    
+    <h3> Quantum Mechanics 
+    <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button">Github</button> 
+    </h3> 
+    
+    
+    Deriving the spectrum and the eigenvalues of the Hydrogen atom using the series solution to the Schrodinger equation is an analytical nightmare. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner</a> is also much work. I enjoyed both approaches, but you can use the finite difference approximation if you need a feel of the solutions in no time.
+    
+    In 1 dimension, the second derivative can be approximated as a difference, and the Schrodinger equation equates to a matrix eigenvalue problem after discretizing the potential. This formalism can easily be extended to 3d using tensor products, and voila, you have the answers!
+    <br>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/Hydrogen_Atom.jpeg" alt="Hydrogen Atom" >
+        </div>
+        <div class="column">
+            <img src="images/Harmonic_Oscillator.png" alt="Harmonic Oscillator" >
+        </div>
+    </div>
+    
+    <h3>
+    Chaos in the Lorenz Attractor System 
+    <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button">Github</button> <br>
+    </h3> 
+    
+    The Lorenz system arose in a simplified description of atmospheric convection and is probably the best-known example of a chaotic system. The following system of differential equations defines it:
+    
+    $$ \frac{dx}{dt} = \sigma \left( y - x \right),$$
+    
+    $$ \frac{dy}{dt} = x \left( \rho - z \right)  - y \text{ , and, } $$
+     
+    $$ \frac{dz}{dt} = xy - \beta z.$$
+    
+    \( \alpha, \beta, \) and \( \sigma \) are parameters of the system.
+    
+    The defining property of chaotic systems is <b>approximate initial conditions cannot predict approximate futures whereas exact initial conditions can predict exact future</b>.
+    
+    The popular notion of the butterfly effect (the flap of a butterfly's wing affecting a tornado weeks later) is a metaphorical version of this phenomenon of sensitive dependence on initial conditions. The shape of the solutions also resembles a butterfly to the romanticization's merit.
+    
+    A particle cloud of \( N = 1000 \), points starting about \( [1, 1, 1] \), is integrated this way. You can see how quickly these particles (red dots) diverge from the solution for the starting point \( [1, 1, 1] \) (golden curve).
+    <br><br>
+    
+    <center>
+        <iframe width="70%" height="700" src="https://www.youtube.com/embed/RIgKHnjR-XE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </center>    
+    
+    
+    <h3>Patent Landscape Study of Quantum Technologies</h3> 
+
+    In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools. The report includes elementary physics explanations of the technologies aimed at policymakers and investors.
+<br> <br>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Report')" id="defaultOpen">Report</button>
+        <button class="tablinks" onclick="openCity(event, 'Taxonomy')">Taxonomy</button>
+      </div>
+      
+      <div id="Report" class="tabcontent">
+        <h4><a href="https://arxiv.org/abs/2102.04552">Quantum Technologies: A Review of the Patent Landscape</a>, Mathew Alex, 2021. </h4>
+      </div>
+      
+      <div id="Taxonomy" class="tabcontent">
+        <h4>Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a> </h4>
+
+        <img src="images/Quantum_Technologies_Taxonomy.png" alt="Quantum Technologies Taxonomy" class="center">
+
+      </div>
+      
+   
+    
+
+    
+    
+
+    </br>     <br>
+
+    <hr style="width:100%;">
+    <center>
+    Copyright &copy; 2022 Mathew Alex
+    <center>
+
+</body>
+</html>
