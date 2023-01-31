@@ -115,3 +115,8 @@ button{
     display: table;
     clear: both;
   }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
