@@ -14,3 +14,11 @@ function openCity(evt, cityName) {
   
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
+
+
+var links = document.links;
+for (var i = 0; i < links.length; i++) {
+    if (!(links[i].href.includes('github.io'))) {
+        links[i].target = "_blank";
+    }
+}
