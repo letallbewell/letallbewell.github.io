@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR | Lorentz Transformation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+    <script>
+        window.MathJax = {
+                        tex: {
+                            tags: 'ams'
+                        }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DPXR8GLHEJ');
+    </script>
+
+</head>
+<body>
+  <h1><a href="index.html">Special Relativity</a></h1>
+  <hr style="width:100%;">
+
+  <h2>Lorentz Transformation</h2>
+
+  The Galilean transformation between reference frames moving with constant velocity from each other is straighforward:
+
+  $$ x^{'} =  x - vt, y^{'} =  y, z^{'} =  z, \text{ and},$$
+  $$ t^{'} =  t.$$
+
+
+However, this transformation is at odds with the behaviour of light that led to the postulate of special relativity.
+<br><br>
+<b>Postulate of Special Relativity:</b> All laws of physics are the same of all inertial reference frames. 
+<br><br>
+Conversly, there is nothing an observer can do to differentiate between inertial frames. Most books add a second postulate stating that the speed of light, \(c\), is constant for all inertial observers but it is a law of physics for me. We cannot outrun light unlike a fighter jet going past Mach 1 and Lorentz transformations must be changed.
+<br><br>
+There are a few things we can straightaway say about the new transformations:
+
+<ol>
+    <li>They are linear maps in \(x\) and \(t\) so that straight lines are mapped to straight lines so that law of inertia holds across frames.</li>
+    <li> \( x = vt \) is mapped to the origin of the transformed coordinate.</li>
+</ol>
+
+Or equivalenty:
+
+$$ x^{'} = A (x - vt) \text{ and } $$
+$$ t{'}  = Bx + Ct.$$
+
+<b>Space transformation</b>
+<br><br>
+Going back to our premise, we want light to move with same speed in both frames, that is \( x = ct \) and \( x^{'} = ct^{'} \). This implies,
+
+$$ ct^{'} = A (c - v) t .$$
+
+Taking the reverse transformation from the primed coordinates,
+
+$$ ct = A (c + v) t^{'} .$$
+
+In general, \(A\) can be a function of \(v\) as we will shortly see. But it can only depend on the magnitude of the velocity to respect the homogeinity of space allowing us to use the same \(A\) for the forward and reverse transformations.
+<br><br>
+Multiplying the transformations together,
+
+$$ c^{2}tt^{'} = A^{2} (c^{2} - v^{2}) tt^{'} ,$$
+
+giving,
+
+$$ A = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} .$$
+
+To keep up with convention we will use \( \gamma \) or \( \gamma_{v} \) instead of \(A\).
+<br><br>
+<b>Time transformation</b>
+<br><br>
+The time transformation equation is hiding in its space counterpart and we can get it out by simulataneously using the forward and backward transforms.
+
+$$ x = \gamma ( x^{'} + vt^{'}) =  \gamma ( \gamma (x - vt) + vt^{'}) = \gamma^{2}x - \gamma^{2} vt + \gamma vt^{'},$$
+
+or,
+
+$$ (1 - \gamma^{2}) x = -\gamma^{2}vt + + \gamma vt^{'}.$$
+
+Noting that \( 1 - \gamma^{2} = -\frac{\gamma^{2}v^{2}}{c^{2}} \), cancelling a factor \( \gamma v \), we have the time transformation equation as,
+
+$$ t^{'} = \gamma \left(t - \frac{vx}{c^{2}} \right) .$$
+
+
+Combining both transformations, Lorentz transformation can be summed up as 
+
+
+
+$$ x^{'} =  \gamma (x - vt), y^{'} =  y, z^{'} =  z, \text{ and},$$
+$$ t^{'} = \gamma \left(t - \frac{vx}{c^{2}} \right),$$
+$$\text{where } \gamma = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}} .$$
+
+
+  <hr style="width:100%;">
+  <center>
+  2022 Mathew Alex
+  <center>
+
+</body>
+</html>

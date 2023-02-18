@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR | Lorentz Transformation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+    <script>
+        window.MathJax = {
+                        tex: {
+                            tags: 'ams'
+                        }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DPXR8GLHEJ');
+    </script>
+
+</head>
+<body>
+  <h1><a href="index.html">Differential Equations</a></h1>
+  <hr style="width:100%;">
+
+  <h2>Green's Function</h2>
+  Consider a linear differential operator \( \mathcal{L} \) appearing in the ordinary differential equation (ODE),
+
+  $$ \mathcal{L} f(x) = g(x), $$
+
+  with homogeneous boundary conditions \( f(\pm L) = 0\) with the possibility of \( L \) being infinite. \(g\) is called the source term and \(f\) is our solution. 
+
+  The Green's function, \( G(x, x^{'}) \) is the solution to the ODE for a delta function source term,
+
+  $$ \mathcal{L} G(x, x^{'}) = \delta(x, x^{'}) .$$
+
+  If we apply \( \int dx g(x) \) on both sides,
+
+  $$ \int \mathcal{L} G(x, x^{'}) g(x) dx = \int \delta(x, x^{'}) g(x) dx.$$
+
+  We can pull \( \mathcal{L} \) out of the integral since it is linear and evaluate the delta function integral to give,
+
+
+  $$ \mathcal{L} \int G(x, x^{'}) g(x) dx = g(x^{'}).$$
+
+  Evidently, we achieved the soultion in abstract form as 
+
+  $$ f(x^{'}) = \int G(x, x^{'}) g(x) dx .$$
+
+  <b>To do: </b> 1 ODE and 1 PDE example
+
+  <hr style="width:100%;">
+  <center>
+  2022 Mathew Alex
+  <center>
+
+</body>
+</html>
