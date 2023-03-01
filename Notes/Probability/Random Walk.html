@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability | Random Walk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+    
+    <script>
+      MathJax = {
+        tex: {tags:'ams', inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DPXR8GLHEJ');
+    </script>
+
+</head>
+<body>
+  <h3><a href="index.html">Probability</a></h3>
+
+ 
+  <hr style="width:100%;">
+
+  <h2>Random Walk</h2>
+
+
+  Consider random walk on a unifrom one dimensional lattice with unit spacing and let the probabiltiy to make a jumb to the right be $0\le p \le 1$. Obviously, the probabiltiy to jumb right is $1-p$.
+  <br><br>
+  To compute the statistics of the system let us compute the probability, $\text{Pr}(N, k)$ that the random walker reaches the $k$-th lattice points in $N$ jumbs. There are $ \bigl( \begin{smallmatrix} N \\ k \end{smallmatrix}\bigr) $ to choose $k$ steps to the right from $N$ steps and each of these choices have an individual chance of $ p^{k}(1-p)^{N-k} $. So 
+
+  \begin{equation} 
+  \text{Pr}(N, k) = \bigl( \begin{smallmatrix} N \\ k \end{smallmatrix}\bigr) p^{k}(1-p)^{N-k}.
+  \tag{1-1}
+  \end{equation}
+
+  The average position after $N$ steps,
+
+  \begin{equation} 
+    \begin{aligned} 
+        \langle x_{N} \rangle &= \sum_{i=1}^{N} \langle x_{i} \rangle \\
+        &= N \langle x_{1} \rangle \\
+        &= N (p - (1 - p)) \\
+        &= N (2p - 1).
+    \end{aligned}
+  \tag{1-2}
+  \end{equation}
+
+  \begin{equation} 
+    \begin{aligned} 
+        \langle x_{N}^2 \rangle &= \sum_{i=1}^{N} \langle x_{i}^2 \rangle \\
+        &= N \langle x_{1}^2 \rangle \\
+        &= N (p + (1 - p)) \\
+        &= N 
+    \end{aligned}
+  \tag{1-2}
+  \end{equation}
+  which is expected.
+  <br><br>
+  The variance
+  \begin{equation} 
+    \begin{aligned} 
+        \sigma^{2} &=  \sum_{i=1}^{N} \sigma_{i}^2 \\
+        &=  N (\langle x_{1}^{2} \rangle - \langle x_{1} \rangle^{2} ) \\
+        &= N (1 - (2p - 1)^{2}) \\
+        &= 4Np(1-p).
+    \end{aligned}
+  \tag{1-3}
+  \end{equation}
+  Note that $\sigma^{2} = 0$ when $p=\frac{1}{2}$.
+  <br><br>
+
+  <hr style="width:100%;">
+  <center>
+  2022 Mathew Alex
+  <center>
+
+</body>
+</html>
