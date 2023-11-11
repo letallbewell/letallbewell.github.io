@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTR 1P01</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+        margin-top:5%;margin-bottom:5%;margin-left:5%;margin-right:5%;
+        font-size: 120%;
+      }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1>ASTR 1P01 EXAM – DHOWES</h1>
+    
+
+
+
+ 
+    <hr style="width:100%;">
+
+    <div style="width: 60%; float: left;">
+      <ul>
+        <li> Exam <b>starts at 2:00 pm – 50 minutes to complete</b> the exam </li>
+        <li> Use <b>pencil</b> only </li>
+        <li> Calculators are the only electronic devices allowed </li>
+        <li> You can have 42 doubled-sided sheets of notes</li>
+        <ul>
+          <li> No cell phones, smart watches, headphones, etc. </li>
+        </ul>
+      </ul>
+      <h3>Exam Submission:</h3>
+      <ul>
+        <li> Raise your hand when finished – a proctor will collect your exam </li>
+        <li> Submit both the scantron sheet and exam questions </li>
+        <li> Have your student ID or government-issued ID with your name </li>
+        <li> <b>Exams without a student ID number written AND the bubbles filled in WILL GET A MARK OF ZERO!</b> </li>
+        <li> Exam <b>ends at exactly 2:50 pm</b> </li>
+        <ul>
+          <li> Remain seated and wait for a proctor to collect your exam </li>
+        </ul>
+      </ul>
+    </div>
+
+    <div style=" width:30%; float:right;">
+      <center>
+        <canvas id="canvas" width="500px" height="500px" >
+        </canvas>
+      </center>
+      
+    </div>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      let radius = canvas.height / 2;
+      ctx.translate(radius, radius);
+      radius = radius * 0.90
+      setInterval(drawClock, 1000);
+      
+      function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+      }
+      
+      function drawFace(ctx, radius) {
+        const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+        grad.addColorStop(0, '#333');
+        grad.addColorStop(0.5, 'white');
+        grad.addColorStop(1, '#333');
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, 2*Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = radius*0.1;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+        ctx.fillStyle = '#333';
+        ctx.fill();
+      }
+      
+      function drawNumbers(ctx, radius) {
+        ctx.font = radius*0.15 + "px arial";
+        ctx.textBaseline="middle";
+        ctx.textAlign="center";
+        for(let num = 1; num < 13; num++){
+          let ang = num * Math.PI / 6;
+          ctx.rotate(ang);
+          ctx.translate(0, -radius*0.85);
+          ctx.rotate(-ang);
+          ctx.fillText(num.toString(), 0, 0);
+          ctx.rotate(ang);
+          ctx.translate(0, radius*0.85);
+          ctx.rotate(-ang);
+        }
+      }
+      
+      function drawTime(ctx, radius){
+          const now = new Date();
+          let hour = now.getHours();
+          let minute = now.getMinutes();
+          let second = now.getSeconds();
+          //hour
+          hour=hour%12;
+          hour=(hour*Math.PI/6)+
+          (minute*Math.PI/(6*60))+
+          (second*Math.PI/(360*60));
+          drawHand(ctx, hour, radius*0.5, radius*0.07);
+          //minute
+          minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+          drawHand(ctx, minute, radius*0.8, radius*0.07);
+          // second
+          second=(second*Math.PI/30);
+          drawHand(ctx, second, radius*0.9, radius*0.02);
+      }
+      
+      function drawHand(ctx, pos, length, width) {
+          ctx.beginPath();
+          ctx.lineWidth = width;
+          ctx.lineCap = "round";
+          ctx.moveTo(0,0);
+          ctx.rotate(pos);
+          ctx.lineTo(0, -length);
+          ctx.stroke();
+          ctx.rotate(-pos);
+      }
+      </script>
+
+
+
+</body>
+</html>
