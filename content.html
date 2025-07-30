@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathew Alex | Files</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+      body {
+        font-family: "Computer Modern Serif", sans-serif;
+      }
+    </style>
+
+</head>
+
+<body>
+
+<h1>File Browser</h1>
+<hr style="width:100%;">
+
+  <div id="output"></div>
+
+  <script>
+    const username = "letallbewell"; // change to your GitHub username
+    const repo = "letallbewell.github.io"; // change to your repository name
+    const branch = "main";
+    const path = "files"; // change to your desired path
+
+    async function fetchFiles(folder, parent) {
+      const url = `https://api.github.com/repos/${username}/${repo}/contents/${folder}?ref=${branch}`;
+      const res = await fetch(url);
+      if (!res.ok) {
+        parent.textContent = "Failed to load files.";
+        return;
+      }
+
+      const items = await res.json();
+      const ul = document.createElement("ul");
+
+      for (const item of items) {
+        const li = document.createElement("li");
+        if (item.type === "dir") {
+          li.textContent = item.name;
+          li.classList.add("folder");
+          ul.appendChild(li);
+          await fetchFiles(`${folder}/${item.name}`, li);
+        } else {
+          const a = document.createElement("a");
+          a.href = `https://${username}.github.io/${repo}/${item.path}`;
+          a.textContent = item.name;
+          a.target = "_blank";
+          li.classList.add("file");
+          li.appendChild(a);
+          ul.appendChild(li);
+        }
+      }
+      parent.appendChild(ul);
+    }
+
+    fetchFiles(path, document.getElementById("output"));
+  </script>
+
+  
+
+</body>
+</html>
