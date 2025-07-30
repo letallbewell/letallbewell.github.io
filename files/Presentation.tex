@@ -1,0 +1,1227 @@
+\documentclass[landscape]{slides}
+\usepackage[margin=1cm,nohead]{geometry}
+\usepackage{amsmath,amssymb}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+\usepackage{array} 
+
+\def\myref#1{\textcolor{magenta}{\small #1}}
+\def\myemph#1{\textcolor{blue}{\em #1}}
+\def\bigemph#1{\textcolor{red}{\em #1}}
+\def\formula#1{{\color{black}$#1$}}
+
+\def\clsp#1{\vspace{-#1}}
+
+
+\def\Rnum{\mathbb{R}}
+\def\Cnum{\mathbb{C}}
+\def\txtint{{\textstyle\int}}
+\def\bigint{{\displaystyle\int}}
+\def\sgn{\text{sgn}}
+\def\const{\text{const.}}
+
+\def\smallbinom#1#2{{\textstyle \binom{#1}{#2}}}
+\def\smallsum{\textstyle\sum}
+\def\T{{\rm T}}
+\def\i{\hat{i}}
+
+\def\scal{{\rm scal.}}
+\def\trans{{\rm trans.}}
+\def\triv{{\rm triv.}}
+\def\Jsp{\mathrm{J}^{(\infty)}}
+\def\Esp{\mathcal{E}}
+
+\def\Lagr{{\mathcal L}}
+
+\def\longit{{(u)}}
+\def\transv{{(v)}}
+
+
+
+\definecolor{pakistangreen}{rgb}{0.0, 0.4, 0.0}
+\definecolor{officegreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{lasallegreen}{rgb}{0.03, 0.47, 0.19}
+
+
+
+\def\X#1{{\mathrm X}_{#1}}
+\def\Y#1{{\mathrm Y}_{#1}}
+\def\hatX#1{\hat{\mathrm X}_{#1}}
+\def\hatY#1{\hat{\mathrm Y}_{#1}}
+\def\pr{\mathrm {pr}}
+
+\def\Ref#1{Ref.\cite{#1}}
+
+
+
+\tolerance=99999
+
+
+\title{Nonlinear wave equation for an elastic string: \\ derivation, symmetries, conserved quantities}
+\author{Mathew Alex 7652597
+\\ 
+Supervisor: Prof. Stephen Anco
+\\
+M.Sc. Physics Thesis Presentation
+}
+\date{July 31, 2025}
+
+\begin{document}
+\maketitle
+
+\parskip=3pt
+
+
+\newpage
+%intro-1
+
+\begin{center}
+{\bf  Linear Waves}
+\end{center}
+
+Linear waves in 1D elastic media have several important physical\\ applications:
+\begin{enumerate}
+\item 
+vibrations of an elastic string e.g.\ violin or piano
+\item 
+sound waves e.g.\ pipe organ or flute
+\item 
+seismic waves e.g.\ earth tremor
+\end{enumerate}
+\hfil
+
+$v(x,t) = \text{transverse displacement}$
+
+equilibrium is $v(x,t)\equiv 0$
+
+\includegraphics[width=0.8\textwidth]{Presentation-diagram1.pdf}
+
+Governing equation for linear waves
+\[
+v_{tt} - c^2 v_{xx} = 0, 
+\quad
+c=\const
+\]
+
+\newpage
+%intro-2
+
+Physical conditions under which the linear wave equation holds for the motion of an elastic string:
+\begin{enumerate}
+\item 
+constant tension 
+\item 
+small angle approximation ($ |v_x| \ll 1 $)
+\item 
+no longitudinal motion
+\end{enumerate}
+\hfil
+
+For motion that involves \emph{large deformations} from equilibrium, \\
+\myemph{all three conditions no longer hold}. 
+\\
+    
+Waves in any real elastic material will exhibit some \emph{longitudinal motion}
+(i.e.\ compression/rarefaction will occur). 
+\\
+
+\begin{center}
+\myemph{We want to study correct physical wave equation \\ for an elastic string without restrictions.}
+\end{center}
+
+\newpage
+%intro-3
+
+\begin{center}
+\textbf{Nonlinear wave equation for  1D elastic string}
+\end{center}
+\hfil
+
+\begin{itemize}
+\item 
+dynamical state of an elastic string can involve motion 
+in both transverse directions and longitudinal direction 
+\item 
+physical elastic string will have finite length with boundary conditions at the ends
+\item 
+in a very long elastic string, motion in interior does not depend on boundary conditions 
+\end{itemize}
+\hfil
+
+For mathematical simplicity:\\
+consider only free motion without boundary conditions
+\\
+
+$v,w=\text{ transverse displacements}$; $u=\text{ longitudinal displacement}$ 
+
+equilibrium is $v,w\equiv 0$ and $u\equiv 0$
+\\
+
+\includegraphics[width=0.8\textwidth]{Presentation-diagram2.pdf}
+
+\newpage
+
+\includegraphics[width=0.8\textwidth]{Presentation-diagram3.pdf}
+
+Elastic string wave equations
+
+\begin{align*}
+u_{tt} & = c^2 u_{xx} + ({\tilde c}^2 -c^2)\big( (1+u_x)\big/\sqrt{(1+u_x)^2 + v_x^2 + w_x^2} \big){}_x
+\\
+v_{tt} & = c^2 v_{xx} + ({\tilde c}^2 -c^2)\big( v_x\big/\sqrt{(1+u_x)^2 + v_x^2 + w_x^2} \big){}_x
+\\
+w_{tt} & = c^2 w_{xx} + ({\tilde c}^2 -c^2)\big( w_x\big/\sqrt{(1+u_x)^2 + v_x^2 + w_x^2} \big){}_x
+\end{align*}
+where $c,\tilde c=\const > 0$
+
+\newpage
+%survey-1
+\begin{center}
+\textbf{Survey of literature on derivations}
+\end{center}
+
+\textbf{First derivation:} W.F. Osgood \myref{1925, ``Advanced Calculus'' (book)}
+
+\textbf{Widely-cited paper:} G.F. Carrier \myref{1945, Q. J. Appl. Math.}
+
+\begin{itemize}
+\item
+applied Newton's law framework
+\item
+restricted motion to a plane 
+\item
+assumes linear stress-strain relation (Hooke's law) 
+\end{itemize}
+\hfil
+
+Longitudinal dynamical variable $u$ and transverse dynamical variable $v$\\
+$\Longleftrightarrow$ $w=0$ in the nonlinear wave equations 
+\\
+
+Stress $\sigma = E\lambda$, 
+where $\lambda = \sqrt{(1+u_x)^2 + v_x^2} -1$ is strain (net stretch)\\
+and $E$ is elastic modulus (constant)
+\\
+
+Dynamical tension $T = T_0 + A\sigma$,
+where $T_0$ is tension in equilibrium\\
+and $A$ is cross-section area (constant)
+
+\[\begin{aligned}
+\rho A u_{tt} & = \big( (1+u_x)T/(\lambda +1) \big){}_x, 
+\quad
+\rho A v_{tt} & = \big( v_xT/(\lambda +1) \big){}_x
+\end{aligned}\]
+where $\rho$ is density (constant)
+
+\newpage
+%survey-2
+\textbf{Subsequent major paper:} R. Narasimha \myref{1968, J. Sound and Vibration}
+
+Similarly to Osgood/Carrier
+\begin{itemize}
+\item
+applied Newton's law framework 
+\item
+assumes linear stress-strain relation (Hooke's law) 
+\end{itemize}
+\hfil
+
+Differences
+\begin{itemize}
+\item
+used Lagrangian variables (position and time for motion of particles comprising the elastic string)
+\item
+\myemph{no restriction} on transverse motion 
+\item
+emphasizes that, in general, \myemph{longitudinal mode is excited} ($u\not\equiv 0$)
+\item
+points out that \myemph{transverse motion in a plane may be unstable}
+\end{itemize}
+\hfil
+
+When the equations are re-written in the ``lab'' variables $x$ and $t$, 
+they are equivalent to the equations for $(u,v,w)$
+
+\newpage
+%survey-3
+
+\textbf{Nonlinear elasticity approach:} S. Antman \myref{2005, ``Noninear Problems of Elasticity" (book)}
+
+\begin{itemize}
+\item
+uses conservation of momentum and angular momentum \\
+in vector variables
+\item
+no restriction on transverse motion
+\item 
+considers general \myemph{nonlinear stress-strain} relation
+\end{itemize}
+\hfil
+
+position vector of material points $\vec{r}(t,x) = (x+u,v,w)$
+\\
+
+elastic force vector $\vec{F}^e$
+\\
+
+Conservation of momentum states
+\[
+\rho A \vec{r}_{tt} = \vec{F}^e_x
+\]
+
+Conservation of angular momentum leads to the condition 
+$\vec{F}^e \times \vec{r}_x=0$ \\
+(called ``perfect flexibility'') \\
+$\Longrightarrow$
+\[
+\vec{F}^e = K(\lambda) \widehat{r_x}
+\]
+where $\widehat{r_x} = |\vec{r_x}|^{-1} \vec{r_x}$ is unit tangent vector,
+and $K(\lambda)$ is called the stress-strain function.
+
+\newpage
+
+Stress-strain function $K(\lambda)$ must satisfy two physical conditions
+\begin{itemize}
+\item
+$K$ increases with $\lambda$: string lengthens only with increasing $K$
+\item
+$K\to\infty$ as $\lambda\to\infty$: an infinitely large stretch occurs only by an infinite tension
+\end{itemize}
+\hfil
+
+Equation of motion for $\vec{r}(t,x)$ has explicit component form
+\begin{align*}
+u_{tt} & =  \big( k(\lambda) (1+u_x) \big){}_x
+\\
+v_{tt} & = \big( k(\lambda) v_x \big){}_x
+\\
+w_{tt} & = \big( k(\lambda) w_x \big){}_x
+\end{align*}
+with
+\[
+k(\lambda) = \frac{K(\lambda)}{(\lambda+1)\rho A},
+\quad
+\lambda = \sqrt{(1+u_x)^2 + v_x^2 + w_x^2} -1
+\]
+\hfil
+
+\begin{itemize}
+\item
+Linear function $K(\lambda) = T_0 + AE\lambda$
+yields Narasimha's equations for elastic string
+\item
+Nonlinear functions $K(\lambda)$ describe nonlinearly elastic string\\
+(i.e.\ nonlinear tension force)
+\end{itemize}
+
+\newpage
+%survey-4
+
+\textbf{Continuum mechanics framework:}  
+Serrano et al. \myref{2019, Internat. J. Solids and Structures}
+
+\begin{itemize}
+\item
+uses action principle in terms of displacement variables
+\item
+allows for general transverse motion
+\item 
+based on stored potential energy which is a function of strain tensor
+\item
+equations of motion given by variational derivative of action principle
+\end{itemize}
+\hfil
+
+equilibrium is $\vec{X} = (x,0,0)$ (called ``reference configuration'')
+\\
+
+$\vec{r} = (x+u,v,w)$ position of material elements comprising string\\
+(called ``current configuration'')
+\\
+
+displacement is $\vec{R} = \vec{r} - \vec{X} = (u,v,w)$
+\\
+
+kinetic energy of material element $\tfrac{1}{2}\rho A |\vec{R}_t|^2 dx$
+\\
+
+a material element $d\vec{X}$ is stretched to  
+$d\vec{r} 
+= 
+\mathbf{F} \cdot d\vec{X}$,
+where 
+$\mathbf{F} = \partial_{\vec{X}} \vec{r}$ is the deformation gradient tensor
+\\
+
+stored potential energy of a material element is
+$W(\text{strain tensor})dx$,
+where the strain tensor, quantifiying the deformation, vanishes when $\mathbf{F} \in \text{SO}(3)$
+\\
+
+some obvious choices for the strain tensor are 
+$(\mathbf{F}^\top \mathbf{F})^p - \mathbf{I} 
+= (\mathbf{F}^\top \mathbf{F}) \cdots (\mathbf{F}^\top \mathbf{F}) - \mathbf{I}, p \neq 0$ and $\ln \mathbf{F}^\top \mathbf{F}$
+\\
+
+physically, $\mathbf{F}^\top \mathbf{F}$ gives change in length of a material element, 
+$d\vec{r} \cdot d\vec{r} = (d\vec{X})^\top \mathbf{F}^\top \mathbf{F} d\vec{X}$
+\\
+
+for strings
+$\mathbf{F} = |\vec{r}_x| (\widehat{r_x} \otimes \hat{i})$
+and
+$\mathbf{F}^\top \mathbf{F} = |\vec{r}_x|^2 (\hat{i} \otimes \hat{i}) 
+= (1 + \lambda)^2 (\hat{i} \otimes \hat{i})$,
+where 
+$\lambda = |\vec{r}_x|-1$ is the strain (net stretch)
+\\
+
+effectively, the stored potential energy can be defined to be 
+$W(\lambda) dx$
+
+\newpage
+
+Action principle is total kinetic energy minus total potential energy 
+\[
+S = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \big( \tfrac{1}{2}\rho A |\vec{R}_t|^2 -W(\lambda) \big) dx dt
+\]
+
+$\Longrightarrow$ variational derivative yields (material) equations of motion
+\[
+\frac{\delta S}{\delta \vec{R}} = -\rho A \vec{R}_{tt} + \big( (W'(\lambda)/(\lambda+1)) \vec{r}_x \big){}_x =0
+\]
+
+$\Longrightarrow$ nonlinear elastic string equations 
+\[
+\vec{R}_{tt}  = ( k(\lambda) \vec{r}_x )_x ,
+\quad
+k(\lambda) = \frac{W'(\lambda)}{(\lambda+1)\rho A},
+\quad
+\lambda = |\vec{r}_x|-1,
+\quad
+\vec{r} = x\,\hat{i} +\vec{R}
+\]
+where $W'(\lambda) = K(\lambda)$ is the stress-strain function. 
+\\
+
+\begin{itemize}
+\item
+Potential energy is typically a quadratic function of strain
+\[
+W(\lambda) = \tfrac{1}{2} c^2 (\lambda+1)^2 + ({\tilde c}^2 - c^2) \lambda
+\]
+$\Longrightarrow$ linear stress-strain $K(\lambda) = c^2 \lambda + {\tilde c}^2$
+\item
+Reduces to the Carrier/Narasimha equations for $\vec{R}=(u,v,w)$ 
+\end{itemize}
+
+\newpage
+% variational structure
+\begin{center}
+\textbf{ Lagrangian and Hamiltonian of elastic string equations}
+\end{center}
+\begin{itemize}
+\item
+Lagrangian 
+\[
+L[\vec{R}] = \tfrac{1}{2}\rho A |\vec{R}_t|^2 - W(\lambda)
+\]
+\[
+\frac{\delta L}{\delta \vec{R}} = -\rho A \vec{R}_{tt} + \big( (\underbrace{W'(\lambda) / (\lambda + 1)}_{\displaystyle \rho A k(\lambda) }) \vec{r}_x  \big){}_x = 0
+\]
+\item
+Hamiltonian, $H$, can be obtained from $L$ via a Legendre transform using the momentum 
+\[
+\vec{p} = \dfrac{\partial L}{\partial \vec{R_t}} = \rho A \vec{R}_t
+\]
+$\Longrightarrow$
+\[
+H[\vec{p},\vec{R}] = \vec{p} \cdot \vec{R_t} - L 
+= \frac{|\vec{p}|^2}{2 \rho A} + W(\lambda)
+\]
+Hamilton's equations of motion:
+\[
+\vec{R}_t = \frac{\delta H}{\delta \vec{p}} = \frac{1}{\rho A}\vec{p}
+\quad\text{  and }\quad
+\vec{p}_t = -\frac{\delta H}{\delta \vec{R}} 
+= \rho A \big( k(\lambda) \vec{r}_x  \big){}_x 
+\]
+\item
+These equations are evolution PDEs which have a unique solution\\
+for given initial data $(u,v,w)\big|_{t=0}$ and $(u_t,v_t,w_t)\big|_{t=0}$. 
+\end{itemize}
+
+
+\newpage
+%symms-1
+\begin{center}
+\textbf{Point symmetries}
+\end{center}
+
+\begin{itemize}
+\item 
+Transformations acting in the space of kinematic variables $(x,t,u,v,w)$
+under which the form of the wave equations is preserved 
+\item 
+The wave equations manifest some evident point symmetries: \\
+\emph{time and space translations}; \emph{rotations in the transverse $(v,w)$ plane}
+\end{itemize}
+\hfil
+
+\begin{center}
+\myemph{Goal: Find all non-manifest point symmetries}
+\end{center}
+\hfil
+
+Consider one-parameter group of transformations 
+\begin{align*}
+x \to \tilde{x} & = x + \epsilon \xi(x,t,u,v,w) + O(\epsilon^2) \\
+t \to \tilde{t} & = t + \epsilon \tau(x,t,u,v,w) + O(\epsilon^2) \\
+u \to \tilde{u} & =  u + \epsilon \eta^u(x,t,u,v,w) + O(\epsilon^2) \\
+v \to \tilde{v} & = v + \epsilon \eta^v(x,t,u,v,w) + O(\epsilon^2) \\
+w \to \tilde{w} & = w + \epsilon \eta^w(x,t,u,v,w) + O(\epsilon^2) 
+\end{align*}
+where $\epsilon = 0$ gives the identity transformation. 
+
+\begin{itemize}
+\item
+Need to know how transformations act on functions of $(t,x)$, 
+because the string equations contain derivatives of $(u,v,w)$
+\item
+Simplest way is by working with infinitesimal transformations 
+\[\begin{aligned}
+(u(t,x),v(t,x),w(t,x)) \to & (\tilde{u}(t,x),\tilde{v}(t,x),\tilde{w}(t,x)) \\
+& = (u(t,x),v(t,x),w(t,x)) \\&\qquad\quad
++ \epsilon\, (P^u(t,x),P^v(t,x),P^w(t,x)) + O(\epsilon^2)
+\end{aligned}\]
+which is given by 
+\[
+P^u = \eta^u - \xi u_x - \tau u_t \equiv \delta u,
+\
+P^v = \eta^v - \xi v_x - \tau v_t \equiv \delta v,
+\
+P^w = \eta^w - \xi w_x - \tau w_t \equiv \delta w
+\]
+\myref{Bluman \&  Anco 2002, ``Symmetry and Integration Methods for Differential Equations" (book) }
+\item
+$\delta$ denotes infinitesimal change given by the $\epsilon$-derivative at $\epsilon=0$
+\end{itemize}
+\hfil
+
+\underline{Example}: space translation $x\to \tilde{x} = x +\epsilon$ 
+has $\xi =1$, $\tau=0$, $\eta=0$
+
+Transformation on variables gives
+\[\begin{aligned}
+& \tilde{u} = u 
+&&\text{ since no change in $u$ }\\
+& =\tilde{u}(\tilde{x},\tilde{t}) = u(x,t) =u(\tilde{x}-\epsilon,\tilde{t}) 
+&&\text{ by $x=\tilde{x} -\epsilon$ and $t=\tilde{t}$ }
+\end{aligned}\]
+$\Longrightarrow$
+$u(x,t) \to \tilde{u}(x,t) = u(x-\epsilon,t)$
+equivalent transformation on functions
+\\
+
+Infinitesimal change in $u(t,x)$ is given by $P^u = \dfrac{\partial u(x-\epsilon,t)}{\partial \epsilon}\big|_{\epsilon=0} = -u_x$
+
+\newpage
+%symms-2
+
+\textbf{How to find infinitesimal point symmetries}
+
+Preservation of the form of the elastic string equations 
+\[
+\vec{R}_{tt} = ( k(\lambda) (\hat{i} + \vec{R}_x) ){}_x
+\]
+under a symmetry means that the symmetry transformation maps\\
+solutions into solutions
+\\
+
+$\Longrightarrow$
+Infinitesimal change in the form of the equations must vanish\\
+for all solutions:
+\[
+\delta \left( \vec{R}_{tt} - ( k(\lambda) (\hat{i} + \vec{R}_x) ){}_x \right) 
+=0
+\quad\text{ when }\quad
+\vec{R}_{tt} = ( k(\lambda) (\hat{i} + \vec{R}_x) ){}_x
+\]
+where $\delta \vec{R} = \vec{P} = (P^u,P^v,P^w)$.
+\\
+
+Substitute
+$\delta \vec{R}_{tt} =\partial_t^2 \vec{P}$
+and
+$\delta \vec{R}_{x} =\partial_x \vec{P}$
+and
+$\delta k(\lambda) = \dfrac{k'(\lambda)}{\lambda +1} (\hat{i}+\vec{R}_x)\cdot \partial_x \vec{P}$
+\\
+where $\partial$ denotes the derivative acting by chain rule
+\\
+$\Longrightarrow$
+\begin{align*}
+& \partial_t^2 \vec{P} 
+- \partial_x \left( 
+\frac{k'(\lambda)}{\lambda + 1} \big( (\hat{i}+\vec{R}_x)\cdot \partial_x \vec{P} \big)(\hat{i}+\vec{R}_x)
++ k(\lambda) \partial_x \vec{P} \right)
+=0
+\\
+&\quad\text{ when }\quad
+\vec{R}_{tt} = ( k(\lambda) (\hat{i} + \vec{R}_x) ){}_x
+\end{align*}
+called \myemph{symmetry determining equations}
+
+\newpage
+%symms-3
+
+More compact tensorial expression for the determining equations 
+\[
+\partial_t^2 \vec{P} \big|_{\vec{R}_{tt} = ( k(\lambda) (\hat{i} + \vec{R}_x) ){}_x}
+= \partial_x \left( \mathbf{K} \cdot \partial_x \vec{P} \right)
+\]
+where
+\[
+\mathbf{K} = 
+\frac{k'(\lambda)}{\lambda + 1} 
+(\hat{i}+\vec{R}_x)\odot (\hat{i}+\vec{R}_x)
++ k(\lambda) \mathbf{I} 
+\]
+\hfil
+
+\begin{itemize}
+\item
+For point symmetries
+\[
+\vec{P} = \vec{\eta} - \xi \vec{R}_x -\tau \vec{R}_t
+\]
+where $\vec{\eta}=(\eta^u,\eta^v,\eta^w)$, $\xi$, $\tau$ 
+are unknown functions of $t,x,\vec{R}=(u,v,w)$
+\item
+By inspection:\\
+\myemph{time translation} $\tau =1$, $\xi=0$, $\vec{\eta}=0$: \\
+$\tilde{t}=t+\epsilon$
+
+\myemph{space translation} $\xi =1$, $\tau=0$, $\vec{\eta}=0$: \\
+$\tilde{x}=x+\epsilon$
+
+\myemph{transverse rotation} $\vec{\eta} =(0,w, -v)$, $\xi =0$, $\tau=0$: \\
+$\begin{pmatrix} \tilde{v} \\ \tilde{w} \end{pmatrix}
+= \begin{pmatrix} 
+\cos(\epsilon) & \sin(\epsilon) \\
+-\sin(\epsilon) & \cos(\epsilon) 
+\end{pmatrix}
+\begin{pmatrix} v \\ w \end{pmatrix}$\\
+
+\myemph{constant shifts} in $(u,v,w)$
+\end{itemize}
+
+
+
+\newpage
+%symms-4
+
+\textbf{Maple computation to find the point symmetries}
+\hfil\\
+
+Main steps:
+\begin{enumerate}
+\item 
+Set up the general form for the elastic string equations 
+and the general form for a point symmetry.
+\\
+\item
+Compute the determining equations for point symmetries.
+\\
+\item
+Bring the determining equations to simplest form such that 
+linear combinations and cross-differentiations do not yield 
+any equations of lower order in derivatives.\\
+
+Different cases may arise for the resulting simplified equations. 
+\\
+\item
+Solve in each case the system of equations for the unknowns.
+\\
+\end{enumerate}
+\hfil
+
+
+(Show worksheet)
+
+\newpage
+%symms-5
+\begin{center}
+\textbf{List of solutions modulo translations and transverse rotations}
+\end{center}
+
+\begin{itemize}
+\item
+Maple computation yields a classification of all point symmetries 
+\item
+Comprises three separate cases depending on the form of $k(\lambda)$
+\end{itemize}
+\hfil
+
+\begin{enumerate}
+\item 
+Arbitrary $k(\lambda)$
+
+6 point symmetries 
+
+\begin{enumerate}[label=\roman*.]
+\item 
+\myemph{dilation}:  
+$ (\tilde x,\tilde t,\tilde u,\tilde v,\tilde w) = e^{\epsilon} (x,t,u,v,w)$
+\item
+\myemph{time-dependent shift in $u$}:  
+$\tilde u =u + \epsilon t$
+\item
+\myemph{time-dependent shift in $v$}:  
+$\tilde v =v + \epsilon t$
+\item
+\myemph{time-dependent shift in $w$}:  
+$\tilde w =w + \epsilon t$
+\item 
+\myemph{rotations in the $(x+u,v)$ plane}: \\
+$\begin{pmatrix} \tilde x + \tilde u \\ \tilde v  \end{pmatrix}
+= 
+\begin{pmatrix}
+\cos(\epsilon) & \sin(\epsilon) \\
+-\sin(\epsilon) & \cos(\epsilon)
+\end{pmatrix}
+\begin{pmatrix} x + u \\ v \end{pmatrix}$
+\item 
+\myemph{rotations in the $(x+u,w)$ plane}: \\
+$\begin{pmatrix} \tilde x + \tilde u \\ \tilde w  \end{pmatrix}
+= 
+\begin{pmatrix}
+\cos(\epsilon) & \sin(\epsilon) \\
+-\sin(\epsilon) & \cos(\epsilon)
+\end{pmatrix}
+\begin{pmatrix} x + u \\ w \end{pmatrix}$
+\end{enumerate}
+
+\newpage
+
+\item 
+$k(\lambda) = k_0 (1+\lambda)^{p}$,
+\quad
+$p \neq -4, -1, 0$, 
+\quad
+$k_0 = \const \neq 0$
+
+1 extra point symmetry
+
+\begin{enumerate}[label=\roman*.]
+\item 
+\myemph{scaling}: 
+$\tilde t = e^{\epsilon} t$,
+$\tilde u = e^{-\frac{2}{p}\epsilon} (x+u) - x$,
+$\tilde v = e^{-\frac{2}{p} \epsilon} v$,
+$\tilde w = e^{-\frac{2}{p} \epsilon} w$\\
+
+invariants are $x$, $t^{\frac{2}{p}} v$, $t^{\frac{2}{p}} w$, $t^{\frac{2}{p}} (x+u)$ 
+\end{enumerate}
+\hfil
+
+\item
+$k(\lambda) = k_0 (1+\lambda)^{-4}$,
+\quad
+$k_0 =\const\neq 0$
+
+%2 extra point symmetries
+1 extra point symmetry
+
+\begin{enumerate}[label=\roman*.]
+% \item 
+% \myemph{scaling}: 
+% $\tilde t = e^{\epsilon} t$,
+% $\tilde u = e^{\frac{1}{2}\epsilon} (x+u) - x$,
+% $\tilde v = e^{\frac{1}{2} \epsilon} v$,
+% $\tilde w = e^{\frac{1}{2} \epsilon} w$\\
+
+% invariants are $x$, $\dfrac{v}{\sqrt{t}}$, $\dfrac{w}{\sqrt{t}}$, $\dfrac{x+u}{\sqrt{t}}$, 
+%$t^{-\frac{1}{2}} v$, $t^{-\frac{1}{2}} w$, $t^{-\frac{1}{2}} (u+x)$ 
+\item 
+\myemph{time-dependent (conformal) scaling}:\\ 
+$\tilde t = \dfrac{t}{1 - \epsilon t}$,
+$\tilde u = \dfrac{u + \epsilon xt}{1 - \epsilon t}$, 
+$\tilde v =\dfrac{v}{1 - \epsilon t}$,
+$\tilde w = \dfrac{w}{1 - \epsilon t}$
+\\
+
+invariants are $x$, $\dfrac{v}{t}$, $\dfrac{w}{t}$, $\dfrac{x + u}{t}$
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+\begin{center}
+\textbf{Physical meaning of the $k(\lambda)$ in each case}
+\end{center}
+\hfil\\
+The stress-strain function, $K(\lambda)$, in each case can be found using  $k(\lambda) = \frac{K(\lambda)}{(\lambda+1)\rho A}$: 
+\\
+\begin{enumerate}
+\item 
+Arbitrary $k(\lambda) \implies  \text{ arbitrary } K(\lambda)$
+
+\item 
+$k(\lambda) = k_0 (1+\lambda)^{p}$,
+\quad
+$p \neq -4, -1, 0$, 
+\quad
+$k_0 = \const \neq 0$ \\
+$\implies K(\lambda) = K_0 (1+\lambda)^{p+1}, K_0 = \const \neq 0$
+
+\item
+$k(\lambda) = k_0 (1+\lambda)^{-4}$,
+\quad
+$k_0 =\const\neq 0$ \\
+$\implies K(\lambda) = K_0 (1+\lambda)^{-3}, K_0 = \const \neq 0$
+
+\end{enumerate}
+\hfil 
+
+\newpage
+
+\begin{center}
+\textbf{Conservation laws}
+\end{center}
+
+\begin{itemize}
+\item 
+By applying Noether's theorem 
+\myref{Bluman, Cheviakov, \&  Anco 2010, ``Applications of symmetry methods to partial differential equations" (book) },
+we can use the infinitesimal symmetries $\delta \vec{R} = \vec{P}$ 
+to find the conservation laws admitted by the elastic string equations. 
+\item
+\myemph{Variational symmetries} are transformations that preserve the action.
+Equivalently, they change the Lagrangian $L$ by a total space-time derivative, 
+\[\label{variational_symmetry_condition1}
+\delta_{\vec{P}} L \equiv \partial_t A + \partial_x B
+\]
+where $A$ and $B$ are functions of the dynamical variables and their derivatives.
+\item
+The \myemph{variational derivative annihilates total space-time derivatives}. 
+Using this property, 
+we can find the variational symmetries 
+by checking the condition 
+\[
+\frac{\delta (\delta_{\vec{P}} L) }{\delta \vec{R}} = 0
+\]
+which holds off of solutions. 
+\newpage
+\item
+For any variation $\delta \vec{R} = \vec{P}$, the infinitesimal change in the Lagrangian is 
+\[\label{L_variation} \begin{aligned}
+\delta_{\vec{P}} L 
+&= 
+\partial_t \vec{P} \cdot \partial_{\vec{R}_t} L
++ \partial_x \vec{P} \cdot \partial_{\vec{R}_x} L 
+\\
+&= 
+\partial_t (\vec{P} \cdot \partial_{\vec{R}_t} L)
+- \vec{P} \cdot \partial_t \partial_{\vec{R}_t} L
++ \partial_x (\vec{P} \cdot \partial_{\vec{R}_x} L)
+- \vec{P} \cdot \partial_x \partial_{\vec{R}_x} L 
+\\
+&= 
+\partial_t (\vec{P} \cdot \partial_{\vec{R}_t} L)
++ \partial_x (\vec{P} \cdot \partial_{\vec{R}_x} L)
+- \vec{P} \cdot \frac{\delta L}{\delta \vec{R}}  
+\end{aligned}\]
+Rearranging this expression, we obtain
+\[\label{variational_symmetry_condition2}\begin{aligned}
+\vec{P} \cdot \frac{\delta L}{\delta \vec{R}}
+&=
+\partial_t (\vec{P} \cdot \partial_{\vec{R}_t} L)
++ \partial_x (\vec{P} \cdot \partial_{\vec{R}_x} L)
+- \delta_{\vec{P}} L 
+\\
+&=
+\partial_t (\vec{P} \cdot \partial_{\vec{R}_t} L - A)
++ \partial_x (\vec{P} \cdot \partial_{\vec{R}_x} L - B)
+\end{aligned}\]
+for variational symmetries.
+\item
+When equation evaluated on solutions, $\frac{\delta L}{\delta \vec{R}} = 0$,  
+the space-time total derivative on the right-hand side evaluates to zero, yielding a conservation law:
+\[
+\vec{P} \cdot \frac{\delta L}{\delta \vec{R}} = \partial_t T + \partial_x X = 0
+\] 
+
+\newpage
+
+where 
+\[
+T = \vec{P} \cdot \partial_{\vec{R}_t} L - A
+\]
+is the \myemph{conserved density}, 
+and 
+\[
+X = \vec{P} \cdot \partial_{\vec{R}_x} L - B
+\]
+is its \myemph{flux}. 
+\item
+To find $T$ and $X$ explicitly, 
+we repeatedly integrate by parts in $ \vec{P} \cdot \frac{\delta L}{\delta \vec{R}}$ 
+until the expression takes the form of a space-time total derivative.
+\end{itemize}
+\hfil
+
+\newpage
+
+\textbf{Maple computation to find the conservation laws}
+
+
+The main steps for computing conservation laws in Maple are:
+\begin{enumerate}
+\item
+In each case, determine the conditions on the symmetry generator such that the variational derivative annihilates the dot product of the symmetry generator and the string equations.
+\item
+Substitute these conditions into the symmetry generator.
+\item 
+Integrate by parts in the dot product of the modified symmetry generator and the string equations to obtain the explicit expressions for the conserved density and its flux.
+\end{enumerate}
+
+\newpage 
+
+\begin{center}
+\textbf{Variational symmetries}
+\end{center}
+
+Case 1: Arbitrary $k(\lambda)$\\
+In this case, there are 12 symmetries, of which 11 are variational symmetries. The uniform scaling is not variational.
+
+Case 2: $k(\lambda) = k_0 (1+\lambda)^{p}$,
+\quad
+$p \neq -4, -1, 0$, 
+\quad
+$k_0 = \const \neq 0$\\
+In this case, there are 13 symmetries, of which 12 are variational. A combination of the scaling symmetries given by
+\[\begin{aligned}
+\vec{P} &= 
+(
+\frac{1}{p+4} ( -(3p + 4) t u_t + p (x+u)) - x (1 + u_x), \\
+& \quad \quad \frac{1}{p+4} ( -(3p + 4) t v_t + p v) - x v_x, \\
+& \quad \quad \frac{1}{p+4} ( -(3p + 4) t w_t + p w) - x w_x
+)
+\end{aligned}\]
+is a variational symmetry.
+
+Case 3: $k(\lambda) = k_0 (1+\lambda)^{-4}$,
+\quad
+$k_0 = \const\neq 0$\\
+In this case, there are 14 symmetries, of which 13 are variational symmetries. The uniform scaling symmetry is not variational.
+
+\newpage
+
+\begin{center}
+\textbf{Conserved densities and their fluxes}
+\end{center}
+
+The variational symmetries in each case gives the following conservation laws. 
+The physical meaning of the conserved densities $T_6, T_7, T_8, T_{12}, T_{13}, \text{ and } T_{14}$ is not known.
+
+\begin{itemize}
+\item
+Case 1: Arbitrary $k(\lambda)$
+
+In this case, there are 11 conservation laws corresponding to the 11 variational symmetries:
+\begin{enumerate}[label=\roman*.]
+\item 
+time translation: $\vec{P} = (-u_t, -v_t, -w_t)$ gives 
+\[\begin{aligned} 
+T_1 &= \frac{1}{2} \rho A (u_t^2 + v_t^2 + w_t^2) + W(\lambda) = H, \\
+X_1 &= - \frac{W'(\lambda)}{\lambda + 1} 
+(
+(1 + u_x) u_t + v_x v_t + w_x w_t
+)
+\end{aligned}\]
+where $T_1$ is the \myemph{energy} density.
+\item 
+space translation: $\vec{P} = (-u_x, -v_x, -w_x)$ gives 
+\[\begin{aligned}
+T_2 &= \rho A (u_t u_x + v_t v_x + w_t w_x), \\
+X_2 &= -\frac{1}{2} \rho A (u_t^2 + v_t^2 + w_t^2)
++ W(\lambda) \\
+& \quad - \frac{W'(\lambda)}{\lambda + 1} 
+(
+(1 + u_x) u_x + v_x^2 + w_x^2
+)
+\end{aligned}\]
+\item 
+constant shift in $u$:
+$\vec{P} =(1,0,0)$ 
+gives 
+\[
+T_3 = u_t,
+\quad 
+X_3 = -k(\lambda) (1 + u_x)      
+\]
+where $T_3$ is the \myemph{$x$-momentum} density.
+\item 
+constant shift in $v$:
+$\vec{P} =(0,1,0)$ 
+gives
+\[
+T_4 = v_t,
+\quad 
+X_4 = -k(\lambda) v_x     
+\]
+where $T_4$ is the \myemph{$y$-momentum} density.
+\item 
+constant shift in $w$: 
+$\vec{P} =(0,0,1)$ 
+gives
+\[
+T_5 = w_t,
+\quad 
+X_5 = -k(\lambda) w_x     
+\]
+where $T_5$ is the \myemph{$z$-momentum} density.
+\item 
+time dependent shift in $u$: 
+$\vec{P} =(t,0,0)$ 
+gives 
+\[
+T_6 = u - t u_t,
+\quad
+X_6 =  t k(\lambda) (1 + u_x)
+\]
+\item 
+time dependent shift in $v$: 
+$\vec{P} =(0,t,0)$ 
+gives 
+\[
+T_7 = v - t v_t,
+\quad
+X_7 = t k(\lambda) v_x
+\]
+\item 
+time dependent shift in $w$: 
+$\vec{P} =(0,0,t)$ 
+gives 
+\[
+T_8 = w - t w_t,
+\quad
+X_8 = t k(\lambda) w_x
+\]
+\item 
+rotations in the $(v,w)$ plane: $\vec{P} =(0,-w,v)$ gives 
+\[
+T_9 = v w_t - v_t w,
+\quad
+X_9 = k(\lambda) (v_x w - v w_x)
+\]
+where $T_9$ is the \myemph{angular momentum density in the $x$-direction}.
+\item 
+rotations in the $(x+u,w)$ plane: $\vec{P} =(w,0,-(x+u))$ gives 
+\[
+T_{10} = u_t w - (x+u) w_t,  
+\quad
+X_{10} = k(\lambda) ((x + u) w_x - (1 + u_x) w)
+\]
+where $T_{10}$ is the \myemph{angular momentum density in the $y$-direction}.
+\item 
+rotations in the $(x+u,v)$ plane: $\vec{P} =(-v,x+u,0)$ gives 
+\[
+T_{11} = (x+u) v_t - u_t v,
+\quad
+X_{11} = k(\lambda) ((1 + u_x) v - (x + u) v_x )
+\]
+where $T_{11}$ is the \myemph{angular momentum density in the $z$-direction}.
+\end{enumerate}
+
+\newpage
+\item
+Case 2: 
+$k(\lambda) = k_0 (1+\lambda)^{p}$,
+\quad
+$p \neq -4, -1, 0$, 
+\quad
+$k_0 = \const \neq 0$
+\\
+In this case, corresponding to the 12 variational symmetries, there are 12 conservation laws, including specializations of the 11 from Case 1 plus one extra:
+\begin{enumerate}[label=\roman*.]
+\item
+scaling: $\vec{P} = 
+(
+\frac{1}{p+4} ( -(3p + 4) t u_t + p (x+u)) - x (1 + u_x),
+\frac{1}{p+4} ( -(3p + 4) t v_t + p v) - x v_x, 
+\frac{1}{p+4} ( -(3p + 4) t w_t + p w) - x w_x
+)$ 
+gives 
+\[\begin{aligned}
+T_{12} &=
+\frac{3p +4}{p + 4} t H
++ 
+\rho A
+(
+x 
+(u_t (1 + u_x) + v_t v_x + w_t w_x) 
+\\
+& \quad
+- \frac{p}{p + 4}  
+((x + u) u_t + v v_t + w w_t)
+), \\
+X_{12} &=
+\rho A 
+(
+- \frac{1}{2} x (u_t^2 + v_t^2 + w_t^2)
+- \frac{p + 1}{p + 2} k_0 x (1 + \lambda)^{p + 2} \\
+& \quad + \frac{1}{p+4} k_0 (1 + \lambda)^p 
+(
+- (3p + 4) t(u_t (1 + u_x) + v_t v_x + w_t w_x) \\
+& \quad + p ( (x + u) (1 + u_x) + v v_x + w w_x ) 
+)
+)
+\end{aligned}\]
+\end{enumerate}
+
+\newpage
+\item
+Case 3: 
+$k(\lambda) = k_0 (1+\lambda)^{-4}$,
+\quad
+$k_0 = \const\neq 0$
+
+
+In this case, corresponding to the 13 variational symmetries, there are 13 conservation laws, including the specializations of the 11 from Case 1 plus two additional ones:
+\begin{enumerate}[label=\roman*.]
+\item 
+scaling: $ \vec{P} = (\frac{1}{2} (x + u) - t u_t,
+\frac{1}{2} v - t v_t,
+\frac{1}{2} w - t w_t) $ gives
+\[\begin{aligned}
+T_{13} &= 
+t H
+-\frac{1}{2} \rho A ((x + u) u_t + v v_t + w w_t), \\
+X_{13} &=  
+\rho A k_0 (1 + \lambda)^{-4}
+(
+- t (u_t (1 + u_x) + v_t v_x + w_t w_x) \\ 
+& \quad + \frac{1}{2} ((x + u) (1 + u_x) + v v_x + w w_x) 
+)
+\end{aligned}\]
+\item 
+time-dependent (conformal) scaling: $ \vec{P} = (t (x + u) - t^2 u_t,
+t v - t^2 v_t,
+t w - t^2 w_t)$ gives 
+\[\begin{aligned}
+T_{14} &= 
+t^2 H
++ \rho A 
+(
+- t ((x + u) u_t + v v_t + w w_t)
++ \frac{1}{2} ((x + u)^2 + v^2 + w^2) 
+), \\
+X_{14} &= 
+\rho A k_0 t (1 + \lambda)^{-4} 
+(
+- t  (u_t (1 + u_x) + v_t v_x + w_t w_x) \\
+& \quad + (x + u) (1 + u_x) + v v_x + w w_x
+)
+\end{aligned}\]
+\end{enumerate}
+\end{itemize}
+
+\newpage
+\begin{center}
+\textbf{Conclusions}
+\end{center}
+
+\begin{itemize}
+\item
+\myemph{Derivations of the equations of motion for an elastic string}
+\\
+The string equations can be derived from three different perspectives: 
+Newtonian mechanics, nonlinear elasticity, and continuum mechanics. 
+Each approach is consistent with the others.
+\item 
+\myemph{Symmetries}
+\\
+We found a 12-dimensional symmetry group for the string equations when the stress-strain function is arbitrary.
+There is one extra scaling symmetry in the power case and two additional symmetries: 
+the scaling and a time-dependent scaling, in the special power case.
+\item
+\myemph{Conservation laws}
+\\
+Using Noether's theorem, we found the conservation laws admitted by the string equations. They include the familiar conserved quantities: energy, um, and angular momenta.
+\newpage
+\item
+\myemph{No travelling wave solutions}
+\\
+A direct substitution of the travelling wave solution ansatz $\vec{r} = \vec{r}(x - ct)$ into the string equations, followed by integrating once, shows that travelling wave solutions do not exist. 
+\item 
+\myemph{Non-straight equilibrium configurations}
+\\
+The equilibrium condition for an arbitrary string configuration with arc length parameter $s$, $\partial_s (T(s)\widehat{r_s}) = 0$, gives two solutions:
+\\
+1. a straight line configuration with constant tension, or
+\\
+2. an arbitrary curve configuration with zero tension. 
+\item  
+\myemph{Prospective areas of research:}
+\\
+1. finding the symmetries and conservation laws in the case of a finite string with physical boundary conditions at the ends 
+\\
+2. generalizing the derivation of the string equations to membranes, the two-dimensional analog of strings.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% References
+
+% W.F. Osgood, 
+% Advanced Calculus, 
+% The Macmillian Company, New York, 
+% 1925. 
+
+% G.F. Carrier, 
+% On the nonlinear vibration problem of the elastic string. 
+% Q. J. Appl. Math. 3 (1945), 157--165.
+
+% R. Narasimha, 
+% Nonlinear vibration of an elastic string, 
+% J. Sound and Vibration 8 (1968), 134--146.
+
+% O. Serrano, R. Zaera, J. Fern\'andez-S\'aez, M. Ruzzene, 
+% Generalized continuum model for the analysis of nonlinear vibrations of taut strings with microstructure, 
+% Internat. J. Solids and Structures 164 (2019),  157--167. 
+
+% S.S. Antman, 
+% Noninear Problems of Elasticity, 
+% (Applied Math. Sci., volume 107), 
+% Springer, 2005. 
+
+% A.S. Vasudeva Murthy,
+% On the string equation of Narasimha, 
+% In: Connected at infinity II: a selection of mathematics by Indians, 
+% Eds. R. Bhatia, C.S. Rajan, A.I. Singh
+% (TRM, volume 67), 58--84. 
+% Hindustan Book Agency, 2013.
+
+
+\end{document}
