@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
     <link rel="icon" href="favicon.ico">
 
+
     <style>
-      body {
-        font-family: "Computer Modern Serif", sans-serif;
-      }
+    body { font-family: sans-serif; padding: 2rem; }
+    ul { list-style: none; padding-left: 1rem; }
+    .folder { font-weight: bold; margin-top: 10px; }
+    .file a { text-decoration: none; color: blue; }
     </style>
 
 </head>
@@ -22,35 +24,39 @@
 <h1>File Browser</h1>
 <hr style="width:100%;">
 
-  <div id="output"></div>
+  <div id="output">Loading...</div>
+
 
   <script>
-    const username = "letallbewell"; // change to your GitHub username
-    const repo = "letallbewell.github.io"; // change to your repository name
-    const branch = "main";
-    const path = "files"; // change to your desired path
+    const username = "letallbewell";    // replace with your GitHub username
+    const repo = "letallbewell.github.io";            // replace with your GitHub repo
+    const branch = "gh-pages";               // replace with branch, e.g. 'main' or 'gh-pages'
+    const rootPath = "files";            // folder you want to list
 
-    async function fetchFiles(folder, parent) {
-      const url = `https://api.github.com/repos/${username}/${repo}/contents/${folder}?ref=${branch}`;
-      const res = await fetch(url);
+    const pagesBase = `https://${username}.github.io/`;
+
+    async function fetchFiles(path, container) {
+      const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}?ref=${branch}`;
+      const res = await fetch(apiUrl);
       if (!res.ok) {
-        parent.textContent = "Failed to load files.";
+        container.textContent = "Error fetching files.";
         return;
       }
 
-      const items = await res.json();
+      const data = await res.json();
       const ul = document.createElement("ul");
 
-      for (const item of items) {
+      for (const item of data) {
         const li = document.createElement("li");
+
         if (item.type === "dir") {
           li.textContent = item.name;
           li.classList.add("folder");
           ul.appendChild(li);
-          await fetchFiles(`${folder}/${item.name}`, li);
-        } else {
+          await fetchFiles(item.path, li);
+        } else if (item.type === "file") {
           const a = document.createElement("a");
-          a.href = `https://${username}.github.io/${repo}/${item.path}`;
+          a.href = pagesBase + item.path;
           a.textContent = item.name;
           a.target = "_blank";
           li.classList.add("file");
@@ -58,10 +64,13 @@
           ul.appendChild(li);
         }
       }
-      parent.appendChild(ul);
+
+      container.appendChild(ul);
     }
 
-    fetchFiles(path, document.getElementById("output"));
+    const output = document.getElementById("output");
+    output.textContent = "";
+    fetchFiles(rootPath, output);
   </script>
 
   
