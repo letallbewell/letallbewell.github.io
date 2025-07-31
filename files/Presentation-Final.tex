@@ -328,7 +328,7 @@ Serrano et al. \myref{2019, Internat. J. Solids and Structures}
 
 \begin{itemize}
 \item
-uses action principle in terms of displacement variables
+uses \myemph{action principle} in terms of displacement variables
 \item
 allows for general transverse motion
 \item 
@@ -366,20 +366,23 @@ where the strain tensor, quantifiying the deformation, vanishes when $\mathbf{F}
 
 some obvious choices for the strain tensor are 
 $(\mathbf{F}^\top \mathbf{F})^p - \mathbf{I} 
-= (\mathbf{F}^\top \mathbf{F}) \cdots (\mathbf{F}^\top \mathbf{F}) - \mathbf{I}, p \neq 0$ and $\ln \mathbf{F}^\top \mathbf{F}$
+= (\mathbf{F}^\top \mathbf{F}) \cdots (\mathbf{F}^\top \mathbf{F}) - \mathbf{I}, p \neq 0$,
+and $\ln \mathbf{F}^\top \mathbf{F}$
 \\
 
-physically, $\mathbf{F}^\top \mathbf{F}$ gives change in length of a material element, 
+physically, $\mathbf{F}^\top \mathbf{F}$ gives the norm of the stretched material element, 
 $d\vec{r} \cdot d\vec{r} = (d\vec{X})^\top \mathbf{F}^\top \mathbf{F} d\vec{X}$
 \\
 
-for strings
+for strings,
 $\mathbf{F} = |\vec{r}_x| (\widehat{r_x} \otimes \hat{i})$
 and
 $\mathbf{F}^\top \mathbf{F} = |\vec{r}_x|^2 (\hat{i} \otimes \hat{i}) 
 = (1 + \lambda)^2 (\hat{i} \otimes \hat{i})$,
 where 
-$\lambda = |\vec{r}_x|-1$ is the strain (net stretch)
+$\lambda = |\vec{r}_x|-1
+= \sqrt{(1 + u_x)^2 + v_x^2 + w_x^2} - 1$ 
+is the strain (net stretch)
 \\
 
 effectively, the stored potential energy can be defined to be 
@@ -897,10 +900,12 @@ Integrate by parts in the dot product of the modified symmetry generator and the
 \begin{center}
 \textbf{Variational symmetries}
 \end{center}
-
+\begin{itemize}
+\item
 Case 1: Arbitrary $k(\lambda)$\\
 In this case, there are 12 symmetries, of which 11 are variational symmetries. The uniform scaling is not variational.
 
+\item
 Case 2: $k(\lambda) = k_0 (1+\lambda)^{p}$,
 \quad
 $p \neq -4, -1, 0$, 
@@ -917,10 +922,12 @@ In this case, there are 13 symmetries, of which 12 are variational. A combinatio
 \end{aligned}\]
 is a variational symmetry.
 
+\item
 Case 3: $k(\lambda) = k_0 (1+\lambda)^{-4}$,
 \quad
 $k_0 = \const\neq 0$\\
-In this case, there are 14 symmetries, of which 13 are variational symmetries. The uniform scaling symmetry is not variational.
+In this case, there are 14 symmetries, of which 13 are variational. The uniform scaling symmetry is not variational.
+\end{itemize}
 
 \newpage
 
