@@ -120,3 +120,66 @@ button{
     display: flex;
     flex-direction: row;
   }
+
+  /* Reset default margins and ensure the gallery container is centered */
+#Drawings {
+    max-width: 1200px; /* Adjust based on your design */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Clearfix for floated elements (if needed for older browsers) */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Grid layout for the gallery */
+.responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum 250px width */
+    gap: 20px; /* Space between gallery items */
+    padding: 10px;
+}
+
+/* Style for each gallery item */
+.gallery {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Optional: subtle border for visual separation */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Ensure images are uniform in size */
+.gallery img {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Scale image to cover the container, cropping if needed */
+    display: block; /* Remove inline-block spacing */
+    transition: transform 0.3s ease; /* Optional: smooth hover effect */
+}
+
+/* Optional: Add hover effect for images */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Style for the description text */
+.gallery .desc {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9; /* Optional: background for description */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .responsive {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns for mobile */
+    }
+    .gallery img {
+        height: 150px; /* Smaller height for mobile */
+    }
+}
