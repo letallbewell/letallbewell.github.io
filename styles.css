@@ -135,29 +135,30 @@ button{
     clear: both;
 }
 
-/* Grid layout for the gallery */
-.responsive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum 250px width */
-    gap: 20px; /* Space between gallery items */
+/* Masonry layout for the gallery */
+#drawings-gallery, #photos-gallery {
+    column-count: 3; /* Creates 3 vertical columns */
+    column-gap: 20px;
     padding: 10px;
+    display: block;
 }
 
 /* Style for each gallery item */
 .gallery {
-    position: relative;
+    break-inside: avoid; /* Prevents item from splitting across columns */
+    margin-bottom: 20px; /* Vertical space between items */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
-    border: 1px solid #ddd; /* Optional: subtle border for visual separation */
-    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #fff;
 }
 
-/* Ensure images are uniform in size */
+/* Images maintain natural aspect ratio */
 .gallery img {
-    width: 100%; /* Full width of the container */
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Scale image to cover the container, cropping if needed */
-    display: block; /* Remove inline-block spacing */
-    transition: transform 0.3s ease; /* Optional: smooth hover effect */
+    width: 100%;
+    height: auto; /* Allow natural height */
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 /* Optional: Add hover effect for images */
@@ -175,11 +176,14 @@ button{
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .responsive {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns for mobile */
+@media (max-width: 900px) {
+    #drawings-gallery, #photos-gallery {
+        column-count: 2;
     }
-    .gallery img {
-        height: 150px; /* Smaller height for mobile */
+}
+
+@media (max-width: 600px) {
+    #drawings-gallery, #photos-gallery {
+        column-count: 1;
     }
 }

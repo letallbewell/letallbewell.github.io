@@ -118,7 +118,7 @@
                     const name = file.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ");
                     const descHtml = showDesc ? `<div class="desc">${name}</div>` : "";
                     const safePath = encodeURI(file.path);
-                    html += `<div class="responsive"><div class="gallery"><a target="_blank" href="${safePath}"><img src="${safePath}" alt="${name}"></a>${descHtml}</div></div>`;
+                    html += `<div class="gallery"><a target="_blank" href="${safePath}"><img src="${safePath}" alt="${name}"></a>${descHtml}</div>`;
                 });
                 container.innerHTML = html;
             } catch (err) {
