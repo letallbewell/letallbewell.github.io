@@ -121,13 +121,6 @@ button{
     flex-direction: row;
   }
 
-  /* Reset default margins and ensure the gallery container is centered */
-#Drawings {
-    max-width: 1200px; /* Adjust based on your design */
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Clearfix for floated elements (if needed for older browsers) */
 .clearfix::after {
     content: "";
