@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Hide work-in-progress pages from search engines
+Disallow: /Resources.html

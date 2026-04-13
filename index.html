@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
     <link rel="icon" href="favicon.ico">
 
+    <!-- Open Graph Meta Tags for link sharing -->
+    <meta property="og:title" content="Mathew Alex | Physics & Machine Learning">
+    <meta property="og:description" content="Physics student, previously machine learning engineer, trying hard to be useful.">
+    <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
+    <meta property="og:url" content="https://letallbewell.github.io/">
+
     <style>
       body {
         font-family: "Computer Modern Serif", sans-serif;
@@ -22,63 +28,42 @@
       
       gtag('config', 'G-DPXR8GLHEJ');
     </script>
+    <script src="components.js"></script>
 </head>
 
 <body>
-    <h1>Mathew Alex</h1>
-
-    <a href="index.html">About me</a> &nbsp;
-    <a href="Research.html">Research</a> &nbsp;
-    <a href="Fun.html">Fun</a> &nbsp;
-    <a href="Contact.html">Contact</a> &nbsp;
-
-    <hr style="width:100%;">
+    <site-header></site-header>
 
     <h2>About me</h2>
     <i>Physics student, previously machine learning engineer, trying hard to be useful.</i>
-    <br> <br>
-    <div class="row">
 
-      <div class="column">
-        <div style="text-align: center;">
-<img src="images/Photo.jpeg" 
-     alt="Profile picture" 
-     style="width:50%; border-radius:50%; object-fit:cover;">
-
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4em; margin: 3em 0;">
+        <img src="images/Photo.png" alt="Profile picture" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; max-width: 350px;">
+          <button onclick="window.open('https://github.com/letallbewell', '_blank')" type="button">GitHub</button>
+          <button onclick="window.open('https://scholar.google.com/citations?user=0haEg2cAAAAJ&hl=en', '_blank')" type="button">Google Scholar</button>
+          <button onclick="window.open('https://drive.google.com/file/d/1hDcspyUNbRTRUlN4uVqHvF6GRQ5F1dBW/view?usp=sharing', '_blank')" type="button">CV</button>
+          <button onclick="window.open('https://www.linkedin.com/in/mathew-alex-27a41b1b2/', '_blank')" type="button">LinkedIn</button>
+          <button onclick="location.href='mailto:mathewalex1908@gmail.com'" type="button">Email</button>
         </div>
-      </div>
-
-      <div class="column">
-        <div style="text-align: center;">
-          <br> <br>
-          <button onclick="location.href='https://github.com/letallbewell'" type="button">Github</button> &nbsp;
-          <button onclick="location.href='https://www.linkedin.com/in/mathew-alex-27a41b1b2/'" type="button">LinkedIn</button> &nbsp;
-          <button onclick="location.href='https://drive.google.com/file/d/1hDcspyUNbRTRUlN4uVqHvF6GRQ5F1dBW/view?usp=sharing'" type="button">CV</button> &nbsp;
-          <!-- <button onclick="location.href='https://twitter.com/letallbewell'" type="button">Twitter</button> &nbsp; -->
-        </div>
-      </div>
-
     </div>
 
-      <!-- <div>
-
-        <p>There is almost nothing in the world that I do not find interesting: Shakespeare, drawing, airplanes, computer science, the human body, physics and mathematics, you name it! I have tremendous respect for those who know what they want in life, yet I enjoy my fate with a passion even though sometimes I feel like I am paying for my breadth with depth. I chose physics because it has the most universal underpinnings, having to do something with everything. Yet I wholeheartedly recommend all children to be thoroughly educated in literature and history. I am a pragmatic physicist, learning as much and sometimes as little mathematics as required to describe nature, only talking about measurable quantities and not caring about interpretations of quantum mechanics.</p> 
-
-        <p> In 2020, I took a break from physics to spend some time in the industry. I worked with some of the challenging aspects of machine learning, particularly information retrieval from patents and learning from a few examples, catering to corporate customers. I knew neural networks are magical from when I first heard of them in a 3blue1brown video. The utility justifies exploration; the pursuit is similar to differential equations; both are trying to abstract out human intuition about the world in a computational form. 
-        </p>
-
-        <p>I turned my life around after university, learned as much physics as I could, qualified as one of the top 100 in the highest tier graduate research scholarship in India, got into my country's best university for Ph.D. (the Indian Institute of Science), had a job that allowed me to make a difference in the world and had my coveted full scholarship for MS at a US university. If it happened years back, any of these would have made my life, but we change when we stare into the abyss. Now I am enrolled in an MSc in Canada, doing research in symmetries of partial differential equations.
+      <br><br>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <details>
+          <summary style="cursor: pointer; opacity: 0.6; font-style: italic; font-size: 0.9em;">...</summary>
+          <div style="margin-top: 1em; line-height: 1.6;">
+        <p>Several paragraphs about me will be here soon.
           </p>
 
         <p> Human endeavor should be limitless; we are built to be spent. A great love is a flawed love. I feel full, and my adventure is plenty.</p>
       
-      </div> -->
+          </div>
+        </details>
+      </div>
 
-      <br>
-      <hr style="width:100%;">
-      <footer style="text-align: center; margin-top: 20px;">
-  &copy; <script>document.write(new Date().getFullYear())</script> Mathew Alex
-</footer>   
+      <site-footer></site-footer>   
 
 </body>
 </html>

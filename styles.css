@@ -1,10 +1,74 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #0000ee;
+    --border-color: #cccccc;
+    --bg-alt: #f1f1f1;
+    --bg-hover: #dddddd;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --link-color: #8bb4f7;
+        --border-color: #444444;
+        --bg-alt: #1e1e1e;
+        --bg-hover: #333333;
+    }
+}
+
+html[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #0000ee;
+    --border-color: #cccccc;
+    --bg-alt: #f1f1f1;
+    --bg-hover: #dddddd;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --link-color: #8bb4f7;
+    --border-color: #444444;
+    --bg-alt: #1e1e1e;
+    --bg-hover: #333333;
+}
+
+/* Invert diagrams in dark mode for readability and aesthetics */
+html[data-theme="dark"] img.diagram {
+    filter: invert(1) hue-rotate(180deg);
+}
+
 body {
     margin: 7%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
    }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
 
 .column {
 float: left;
 width: 50%;
+}
+
+.column-3 {
+float: left;
+width: 33.33%;
+padding: 0 1%;
 }
 
 /* Clear floats after the columns */
@@ -17,7 +81,8 @@ clear: both;
 button{
     background-color: transparent;
     background-repeat: no-repeat;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     cursor: pointer;
     overflow: hidden;
     outline: none;
@@ -35,8 +100,8 @@ button{
 /* Style the tab */
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-alt);
   }
   
   /* Style the buttons inside the tab */
@@ -53,28 +118,28 @@ button{
   
   /* Change background color of buttons on hover */
   .tab button:hover {
-    background-color: #ddd;
+    background-color: var(--bg-hover);
   }
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    background-color: var(--border-color);
   }
   
   /* Style the tab content */
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-top: none;
   }
 
   div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
   }
   
   div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid var(--text-color);
   }
   
   div.gallery img {
@@ -120,6 +185,12 @@ button{
     display: flex;
     flex-direction: row;
   }
+  
+  iframe {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+  }
 
 /* Clearfix for floated elements (if needed for older browsers) */
 .clearfix::after {
@@ -140,10 +211,10 @@ button{
 .gallery {
     break-inside: avoid; /* Prevents item from splitting across columns */
     margin-bottom: 20px; /* Vertical space between items */
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--bg-color);
 }
 
 /* Images maintain natural aspect ratio */
@@ -164,11 +235,20 @@ button{
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    color: #333;
-    background-color: #f9f9f9; /* Optional: background for description */
+    color: var(--text-color);
+    background-color: var(--bg-alt); 
 }
 
 /* Responsive adjustments for smaller screens */
+@media (max-width: 800px) {
+    .column, .column-3 {
+        width: 100%;
+    }
+    iframe {
+        width: 100%;
+    }
+}
+
 @media (max-width: 900px) {
     #drawings-gallery, #photos-gallery {
         column-count: 2;
@@ -178,5 +258,58 @@ button{
 @media (max-width: 600px) {
     #drawings-gallery, #photos-gallery {
         column-count: 1;
+    }
+}
+
+/* Table of Contents / Sidebar Layout */
+.toc-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Crucial for sticky positioning to work */
+    gap: 4%;
+}
+
+.toc {
+    flex: 0 0 200px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    font-size: 0.85em;
+    opacity: 0.8;
+    border-left: 1px solid var(--border-color);
+    padding-left: 1em;
+    margin-top: 1em;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+}
+
+.toc li {
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+}
+
+.toc-content {
+    flex: 1;
+    min-width: 0; /* Prevents overflow issues with wide equations/images */
+}
+
+@media (max-width: 900px) {
+    .toc-container {
+        flex-direction: column;
+    }
+    .toc {
+        flex: auto;
+        width: 100%;
+        position: relative;
+        top: 0;
+        border-left: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
     }
 }
