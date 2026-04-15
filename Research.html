@@ -98,36 +98,50 @@
 
     <h3 id="tensor-networks" data-toc-title="Tensor Networks & Phase Transitions">
     Tensor Networks, Renormalization, and Phase Transitions
-    <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+    
     </h3> 
     
     <p>My work in statistical mechanics explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:</p>
 
-    <ul>
-        <li><b>Monte-Carlo Simulations:</b> Driving random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.</li>
-        <li><b>Tensor Network Contractions:</b> Representing the partition function as a graph of array contractions. Finding the optimal contraction order is computationally expensive, often requiring SVD approximations to reduce dimensionality.</li>
-    </ul>
-
-    <p><b>Ongoing Work:</b> I am currently developing a rigorous numerical Renormalization Group (RG) argument to demonstrate the phase transition of the 2D Ising model. By tracking the flow of effective coupling constants through real-space decimation, this approach maps the system's trajectory toward trivial or critical fixed points. I plan to extend this formulation into a broader research-level mathematical framework in the future.</p>
-    
+    <h4 id="tensor-network-contractions">Tensor Network Contractions
+        <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+    </h4>
+    <p>Representing the partition function as a Tensor Network(TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.</p>
     <p>The following tensor network contraction gives the partition function for the Ising Hamiltonian on a lattice with periodic boundary conditions (full contraction of larger networks takes a long time).</p>
-    
-
     <img src="images/TN_contraction.jpg" alt="Naive contraction" class="center diagram">
     
     <p>We can see that the code works by checking the thermodynamic variables (these results are exact).</p>
-
-    
     <img src="images/TN_E&Cv.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
     
-
+    <h4 id="monte-carlo-simulations">Monte-Carlo Simulations</h4>
+    <p>Driving random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.</p>
     <p>Results can be compared against a Monte Carlo simulation. See <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for the results of an \( 8\times8 \) lattice:</p>
-
-    
     <img src="images/MC_Samples.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
     <img src="images/MC_Results.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
+    <h4 id="renormalization-group">Renormalization Group (RG) Methods</h4>
+    <p>Analyzing the flow of coupling constants through real-space decimation to estimate the number of phases.</p>
+
+    <p>First, let us use the 1D Ising model defined by the Hamiltonian
+    $$ H = -J \sum_{i} s_i s_{i+1},$$
+    where \( s_i = \pm 1 \) are the spin variables and \( J \) is the coupling constant, to illustrate the RG flow.</p>
+
+    <p>The partition function is given by
+    $$ Z = \sum_{\{s_i\}} e^{-\beta H} = \sum_{\{s_i\}} \prod_{i} e^{\beta J s_i s_{i+1}}.$$</p>
+
+    <p>The idea is to delete every other spin while keeping \( Z \) invariant. This leads to a new effective Hamiltonian with a renormalized coupling constant \( J' \). We can easily show that \( J \) flows to two trivial fixed points: \( J = 0 \) (high temperature, disordered phase) and \( J = \infty \) (low temperature, ordered phase). This is one way to see that the 1D Ising model has no phase transition.</p>
+
+    <p>Although 1D Ising model is exactly solvable, the RG flow provides a more intuitive picture of the physics, which is especially useful for higher-dimensional models where exact solutions are not available. In the 2D Ising model, the RG flow reveals a non-trivial fixed point corresponding to the critical temperature, indicating the presence of a phase transition. The flow diagram below illustrates this behavior, showing how the coupling constant evolves under successive RG transformations. Unlike the 1D case, adjusting \( J \) will not keep \( Z \) constant. But in terms of two parameters \( K \) and \( L \), we can re-parametrize the problem such that the RG flow is well-defined. The flow diagram shows that there are two stable fixed points corresponding to the ordered and disordered phases, and an unstable fixed point corresponding to the critical point of the phase transition.</p>
+    <img src="images/2D_Ising_RG_flow.png" alt="2D Ising RG Flow" class="center diagram">
+
+     <p><b>Ongoing Work:</b> I am currently developing a rigorous numerical Renormalization Group (RG) argument to demonstrate the phase transition of the 2D Ising model. By tracking the flow of effective coupling constants through real-space decimation, this approach maps the system's trajectory toward trivial or critical fixed points. I plan to extend this formulation into a broader research-level mathematical framework in the future.</p>
     
+    <p><b>References:</b></p>
+    <ul>
+        <li>F. Schwabl and W.D. Brewer. <i>Statistical Mechanics</i>. Advanced Texts in Physics. Springer Berlin Heidelberg, 2006. ISBN: 9783540323433.</li>
+        <li>Humphrey J. Maris and Leo P. Kadanoff. "Teaching the renormalization group". In: <i>American Journal of Physics</i> 46.6 (1978), pp. 652–657.</li>
+    </ul>
+
     <h3 id="cosmology"> Cosmology </h3>
     
     <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
@@ -136,7 +150,7 @@
     
     <p>Understanding the nature of primordial fluctuations—the seeds of all structures in the universe—is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation codes, such as <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connect these early fluctuations to present-day large-scale structures.</p>
     
-    <p><b>Ongoing Work:</b> While standard cosmological simulations rely on tree-code approximations to handle vast numbers of particles efficiently, I am currently collaborating with a former mentor to develop a full, unapproximated \(O(N^2)\) direct force computation. By heavily parallelizing the gravitational interactions using CUDA, our goal is to eliminate approximation errors entirely and publish the results.</p>
+    <p><b>Ongoing Work:</b> While standard cosmological simulations rely on tree-code approximations to handle vast numbers of particles efficiently, I am trying to develop a full, unapproximated \(O(N^2)\) direct force computation. By heavily parallelizing the gravitational interactions using CUDA, our goal is to eliminate approximation errors entirely and publish the results.</p>
     
     <iframe class="center" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -153,10 +167,9 @@
      
     $$ \frac{dz}{dt} = xy - \beta z.$$
     
-    \( \alpha, \beta, \) and \( \sigma \) are constants.
-    
+    <p>\( \alpha, \beta, \) and \( \sigma \) are constants.</p>
 
-    The defining property of chaotic systems is that <b>approximate initial conditions cannot predict approximate futures whereas exact initial conditions can predict exact future</b>.
+    <p>The defining property of chaotic systems is that <b>approximate initial conditions cannot predict approximate futures whereas exact initial conditions can predict exact future</b>.</p>
     
     <p>
         The popular notion of the butterfly effect (the flap of a butterfly's wing later developing into a tornado) is a metaphorical version of this phenomenona of sensitive dependence on initial conditions.
