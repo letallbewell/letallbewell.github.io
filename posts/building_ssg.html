@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathew Alex | How to build a completely native static site generator</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+    <link rel="icon" href="../favicon.ico">
+
+    <!-- Open Graph Meta Tags for link sharing -->
+    <meta property="og:title" content="Mathew Alex | How to build a completely native static site generator">
+    <meta property="og:description" content="Physics student, previously machine learning engineer, trying hard to be useful.">
+    <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
+    <meta property="og:url" content="https://letallbewell.github.io/">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DPXR8GLHEJ');
+    </script>
+    <!-- LaTeX Support via MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['\\(', '\\)']],
+          displayMath: [['$$', '$$']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="../components.js"></script>
+</head>
+
+<body>
+  <div class="main-content">
+    <site-header></site-header>
+    <div class="right-pane">
+        <h2>Brutalist Web Development</h2>
+
+<p>Today I built my own static site generator in ~100 lines of Python.</p>
+
+<p>Instead of relying on Jekyll, Next.js, or Hugo, I realized that I just need a script that reads Markdown, injects it into an HTML template, and manages the file hierarchy for me.</p>
+
+<h3>Why?
+Because human endeavor should be limitless, and relying on black-box frameworks hides the fundamental mechanics of the web.</h3>
+
+<b>Benefits:</b>
+- Zero dependencies
+- Fast
+- Perfect Markdown integration
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                <script src="https://giscus.app/client.js"
+                data-repo="letallbewell/letallbewell.github.io"
+                data-repo-id="R_kgDOH3Il6A"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOH3Il6M4C_SXC"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="preferred_color_scheme"
+                data-lang="en"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+                </script>
+            </div>
+            
+        <site-footer></site-footer>   
+    </div>
+  </div>
+</body>
+</html>

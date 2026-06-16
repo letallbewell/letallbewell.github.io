@@ -66,15 +66,38 @@ def update_html_file(file_path, marker_name, new_content):
     with open(file_path, 'w') as f:
         f.write(updated_content)
 
+def auto_inject_galleries(base_dir):
+    images_dir = os.path.join(base_dir, 'images')
+    if not os.path.exists(images_dir):
+        return
+
+    # Find all subdirectories in images/
+    subfolders = [f.name for f in os.scandir(images_dir) if f.is_dir()]
+    
+    # Get all HTML files in the base directory
+    html_files = glob.glob(os.path.join(base_dir, '*.html'))
+
+    for folder in subfolders:
+        folder_path = os.path.join(images_dir, folder)
+        tag_name = folder.upper()
+        
+        # Check if the tag exists in ANY html file
+        target_file = None
+        for html_file in html_files:
+            with open(html_file, 'r') as f:
+                content = f.read()
+            if f'<!-- {tag_name}_START -->' in content:
+                target_file = html_file
+                break
+                
+        if target_file:
+            print(f"Found tag for '{folder}' in {os.path.basename(target_file)}, generating gallery...")
+            # Disable captions for photographs, enable for everything else
+            show_caption = not (folder.lower() == 'photographs' or folder.lower() == 'photos')
+            gallery_html = generate_gallery_html(folder_path, show_caption=show_caption)
+            update_html_file(target_file, tag_name, gallery_html)
+            print(f"Successfully injected {folder} gallery into {os.path.basename(target_file)}\n")
+
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    drawings_dir = os.path.join(base_dir, 'images', 'Drawings')
-    drawings_html = generate_gallery_html(drawings_dir, show_caption=True)
-    update_html_file('Fun.html', 'DRAWINGS', drawings_html)
-    print("Updated Drawings gallery in Fun.html")
-
-    photos_dir = os.path.join(base_dir, 'images', 'Photographs')
-    photos_html = generate_gallery_html(photos_dir, show_caption=False)
-    update_html_file('Fun.html', 'PHOTOS', photos_html)
-    print("Updated Photos gallery in Fun.html")
+    auto_inject_galleries(base_dir)

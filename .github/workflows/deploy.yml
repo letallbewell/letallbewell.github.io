@@ -1,0 +1,42 @@
+name: Compile and Publish
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+      - 'images/**'
+      - '*.py'
+      - 'template.html'
+      - 'styles.css'
+      - 'components.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install Pillow
+
+      - name: Build Site
+        run: python3 build_site.py
+
+      - name: Commit and Push Built Files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # Only commit if there are actually changes compiled
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-compile site via Python generator" && git push)

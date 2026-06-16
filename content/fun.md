@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathew Alex | Interests</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
-    <link rel="icon" href="favicon.ico">
+---
+title: Interests
+output: Fun.html
+---
 
-    <!-- Open Graph Meta Tags for link sharing -->
-    <meta property="og:title" content="Mathew Alex | Interests">
-    <meta property="og:description" content="Physics student, previously machine learning engineer, trying hard to be useful.">
-    <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
-    <meta property="og:url" content="https://letallbewell.github.io/">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DPXR8GLHEJ');
-    </script>
-    <!-- LaTeX Support via MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['\\(', '\\)']],
-          displayMath: [['$$', '$$']]
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script src="components.js"></script>
-</head>
-
-<body>
-  <div class="main-content">
-    <site-header></site-header>
-    <div class="right-pane">
-        <br><br>
+<br><br>
 <div class="toc-container">
 <nav class="toc">
 <b>Contents</b>
@@ -49,7 +12,7 @@
 
 <div class="toc-content">
 
-<h3>Make and Fly Cheap RC Airplanes</h3>
+### Make and Fly Cheap RC Airplanes
 
 <div class="row">
 <div class="column">
@@ -64,9 +27,12 @@ I dare to call this one of the cheapest remote-controlled flying structures; the
 </div>
 </div>
 
-<h3>Drawings</h3>
+### Drawings
 
-<p>I like to draw in notebooks, it relieves stress.<br><br><br><div id="drawings-gallery"><br><!-- DRAWINGS_START --></p>
+I like to draw in notebooks, it relieves stress.
+<br>
+<div id="drawings-gallery">
+<!-- DRAWINGS_START -->
 
 <div class="gallery">
 <a target="_blank" href="images/Drawings/A friend.jpg">
@@ -137,7 +103,8 @@ I dare to call this one of the cheapest remote-controlled flying structures; the
 <!-- DRAWINGS_END -->
 </div>
 
-<h3>Photos</h3>
+
+### Photos
 
 <br>
 <div id="photos-gallery">
@@ -256,18 +223,23 @@ I dare to call this one of the cheapest remote-controlled flying structures; the
 <!-- PHOTOS_END -->
 </div>
 
-<h3>Make Chocolate from Scratch</h3>
 
-<p>I like chocolate, mainly because of its chemical richness, its taste does not come from a single molecule unlike many other flavors, for example, vanilla. <br>I learned how to make chocolate from scratch and it is worth the effort.<br><br><br><br><div class="image-grid"><br><img src="images/Chocolate/Beans.jpg" alt="Coco Beans"><br><img src="images/Chocolate/Chocolate.jpg" alt="Chocolate"><br></div></p>
+### Make Chocolate from Scratch
 
-<h3>Music</h3>
+I like chocolate, mainly because of its chemical richness, its taste does not come from a single molecule unlike many other flavors, for example, vanilla. 
+I learned how to make chocolate from scratch and it is worth the effort.
+<br><br>
+<div class="image-grid">
+<img src="images/Chocolate/Beans.jpg" alt="Coco Beans">
+<img src="images/Chocolate/Chocolate.jpg" alt="Chocolate">
+</div>
 
-<p>Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome shame.<br><br><br><br><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe><br><div style="font-size: 10px; color: var(--text-color); opacity: 0.7; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: inherit; font-weight: 100;"><a href="https://soundcloud.com/mathew-alex-238381510" title="Mathew Alex" target="_blank" style="color: var(--text-color); text-decoration: none;">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG" title="Her" target="_blank" style="color: var(--text-color); text-decoration: none;">Her</a></div></p>
+### Music
+
+Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome shame.
+<br><br>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>
+<div style="font-size: 10px; color: var(--text-color); opacity: 0.7; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: inherit; font-weight: 100;"><a href="https://soundcloud.com/mathew-alex-238381510" title="Mathew Alex" target="_blank" style="color: var(--text-color); text-decoration: none;">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG" title="Her" target="_blank" style="color: var(--text-color); text-decoration: none;">Her</a></div>
 
 </div> <!-- End of toc-content -->
 </div> <!-- End of toc-container -->
-        <site-footer></site-footer>   
-    </div>
-  </div>
-</body>
-</html>

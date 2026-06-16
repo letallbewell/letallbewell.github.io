@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathew Alex | Research</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
-    <link rel="icon" href="favicon.ico">
+---
+title: Research
+output: Research.html
+---
 
-    <!-- Open Graph Meta Tags for link sharing -->
-    <meta property="og:title" content="Mathew Alex | Research">
-    <meta property="og:description" content="Physics student, previously machine learning engineer, trying hard to be useful.">
-    <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
-    <meta property="og:url" content="https://letallbewell.github.io/">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DPXR8GLHEJ');
-    </script>
-    <!-- LaTeX Support via MathJax -->
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['\\(', '\\)']],
-          displayMath: [['$$', '$$']]
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <script src="components.js"></script>
-</head>
-
-<body>
-  <div class="main-content">
-    <site-header></site-header>
-    <div class="right-pane">
-        <mark> <b>In progress</b> </mark>
+<mark> <b>In progress</b> </mark> 
 
 <br><br>
 <div class="toc-container">
@@ -51,9 +14,9 @@
 
 <div class="toc-content">
 
-<h2>Research & Publications</h2>
+## Research & Publications
 
-<h3>Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</h3>
+### Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics
 
 <p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem, symmetries that preserve the action integral map one to one to conservation laws. Most physics equations are conservation laws, often what does not change, the conserved quantities, give us more insight when we model what does change through PDEs. </p>
 
@@ -63,21 +26,21 @@ where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) and
 
 <p>Please find the details of the derivation of this equation, its characterisitic curves, the symmetries and conservation laws admitted by this equation with physical interpretations in my thesis:
 
-<h4><a href="https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16">Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities</a>, Mathew Alex, 2025.</h4>
+#### <a href="https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16">Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities</a>, Mathew Alex, 2025.
 
 </p>
 
 <p>The extension of this equation to two-dimensions (a membrane like a piece of cloth) is even more tricky. But the obvious generalization of 
 upgrading \( \partial_x \) to a covariant derivattive defined on the reference configuration, \( T \) to a tensor depending on the metric tensor of the current configuration and contracted with the two surface basis vectors (instetad of the the one \( \widehat{\partial_x \vec{r}} \) for a curve) and two coordinates \( x^1\) and \(x^2 \), turns out to be correct. More on that in the near future.</p>
 
-<h3>Patent Landscape Study of Quantum Technologies</h3>
+### Patent Landscape Study of Quantum Technologies
 
 <p>In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.</p>
 
 <div>
 #### <a href="https://arxiv.org/abs/2102.04552">Quantum Technologies: A Review of the Patent Landscape</a>, Mathew Alex, 2021.
 
-<h4>Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a></h4>
+#### Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a>
 
 <img src="images/Quantum_Technologies_Taxonomy.png" alt="Quantum Technologies Taxonomy" class="center diagram">
 </div>
@@ -85,7 +48,7 @@ upgrading \( \partial_x \) to a covariant derivattive defined on the reference c
 <br><hr><br>
 ## Computational Projects
 
-<h3>Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+### Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
 
 <p>The Navier-Stokes equations (mass, momentum, and energy continuity. equations for fluids) can describe phenomena ranging from a stirred cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Numerical algorithms require massive parallelization to be of use and there are pesky numerical instabilities. </p>
 
@@ -103,11 +66,11 @@ upgrading \( \partial_x \) to a covariant derivattive defined on the reference c
 </div>
 </div>
 
-<h3>Tensor Networks, Renormalization, and Phase Transitions</h3>
+### Tensor Networks, Renormalization, and Phase Transitions
 
 <p>My work in statistical mechanics explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:</p>
 
-<h4>Tensor Network Contractions <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h4>
+#### Tensor Network Contractions <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
 
 <p>Representing the partition function as a Tensor Network(TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.</p>
 <p>The following tensor network contraction gives the partition function for the Ising Hamiltonian on a lattice with periodic boundary conditions (full contraction of larger networks takes a long time).</p>
@@ -116,14 +79,14 @@ upgrading \( \partial_x \) to a covariant derivattive defined on the reference c
 <p>We can see that the code works by checking the thermodynamic variables (these results are exact).</p>
 <img src="images/TN_E&Cv.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
-<h4>Monte-Carlo Simulations</h4>
+#### Monte-Carlo Simulations
 
 <p>Driving random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.</p>
 <p>Results can be compared against a Monte Carlo simulation. See <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for the results of an \( 8\times8 \) lattice:</p>
 <img src="images/MC_Samples.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 <img src="images/MC_Results.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
-<h4>Renormalization Group (RG) Methods</h4>
+#### Renormalization Group (RG) Methods
 
 <p>Analyzing the flow of coupling constants through real-space decimation to estimate the number of phases.</p>
 
@@ -147,7 +110,7 @@ $$ Z = \sum_{\{s_i\}} e^{-\beta H} = \sum_{\{s_i\}} \prod_{i} e^{\beta J s_i s_{
 <li>Humphrey J. Maris and Leo P. Kadanoff. "Teaching the renormalization group". In: <i>American Journal of Physics</i> 46.6 (1978), pp. 652–657.</li>
 </ul>
 
-<h3>Cosmology</h3>
+### Cosmology
 
 <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
@@ -159,15 +122,15 @@ $$ Z = \sum_{\{s_i\}} e^{-\beta H} = \sum_{\{s_i\}} \prod_{i} e^{\beta J s_i s_{
 
 <iframe class="center" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3>Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+### Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
 
 <p>The Lorenz system arose in a simplified description of atmospheric convection and is, probably, the best-known example of a chaotic system. This system is defined by the following differential equations:</p>
 
-<p>$$ \frac{dx}{dt} = \sigma \left( y - x \right),$$</p>
+$$ \frac{dx}{dt} = \sigma \left( y - x \right),$$
 
-<p>$$ \frac{dy}{dt} = x \left( \rho - z \right)  - y \text{ , and, } $$</p>
+$$ \frac{dy}{dt} = x \left( \rho - z \right)  - y \text{ , and, } $$
 
-<p>$$ \frac{dz}{dt} = xy - \beta z.$$</p>
+$$ \frac{dz}{dt} = xy - \beta z.$$
 
 <p>\( \alpha, \beta, \) and \( \sigma \) are constants.</p>
 
@@ -178,11 +141,12 @@ The popular notion of the butterfly effect (the flap of a butterfly's wing later
 To this romanticization's merit, the shape of the solutions of the Lorenz system also resembles a butterfly.
 </p>
 
+
 <p>A particle cloud of \( N = 1000 \), points starting about \( [1, 1, 1] \), is integrated this way. You can see how quickly these particles (red dots) diverge from the solution for the starting point \( [1, 1, 1] \) (golden curve).</p>
 
 <iframe class="center" src="https://www.youtube.com/embed/RIgKHnjR-XE?si=K0bOBPF62kXlXL48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h3>Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+### Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
 
 <p>Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner,</a> is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.</p>
 
@@ -195,8 +159,3 @@ To this romanticization's merit, the shape of the solutions of the Lorenz system
 
 </div> <!-- End of toc-content -->
 </div> <!-- End of toc-container -->
-        <site-footer></site-footer>   
-    </div>
-  </div>
-</body>
-</html>
