@@ -71,7 +71,7 @@ I did an independent research project in statistical mechanics that explores how
 
 Representing the partition function as a Tensor Network(TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.
 
-The following tensor network contraction gives the partition function for the Ising Hamiltonian on a lattice with periodic boundary conditions (full contraction of larger networks takes a long time).
+The following tensor network contraction gives the partition function for the Ising Hamiltonian on a $2x2$ lattice with periodic boundary conditions (full contraction of larger networks takes a long time).
 
 ![Naive contraction](images/TN_contraction.jpg#center diagram)
 
