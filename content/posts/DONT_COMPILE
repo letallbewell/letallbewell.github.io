@@ -1,0 +1,1 @@
+This file prevents the build_site.py script from compiling the posts directory. Delete this file when you are ready to publish posts.
