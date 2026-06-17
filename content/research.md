@@ -3,11 +3,11 @@ title: Research
 output: Research.html
 ---
 
-@[toc]
-
 ::: in-progress
 **In progress**
-::: 
+:::
+
+@[toc] 
 
 
 

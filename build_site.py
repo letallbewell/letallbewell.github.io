@@ -170,7 +170,7 @@ def build_site():
                 hover_out = "this.style.opacity=0.6"
             nav_links.append(f'<a href="{p["output"]}" style="{style}" onmouseover="this.style.opacity=1" onmouseout="{hover_out}">{p["title"]}</a>')
             
-        nav_links_str = "\\n          ".join(nav_links)
+        nav_links_str = "\n          ".join(nav_links)
         navbar_html = f'''<header>
         <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 2rem;">
           <h1 style="margin: 0; font-family: ui-serif, Georgia, serif; font-size: 1.5rem;">Mathew Alex</h1>
