@@ -38,9 +38,33 @@ def md_to_html(text):
         return ""
         
     # Inline rules
+    def image_replacer(match):
+        alt = match.group(1)
+        url = match.group(2)
+        classes = ""
+        if '#' in url:
+            url, cls = url.split('#', 1)
+            classes = f' class="{cls}"'
+        return f'<img src="{url}" alt="{alt}"{classes}>'
+
+    def youtube_replacer(match):
+        video_id = match.group(1)
+        classes = ""
+        if '#' in video_id:
+            video_id, cls = video_id.split('#', 1)
+            classes = f' class="{cls}"'
+        return f'<iframe width="100%" {classes} src="https://www.youtube.com/embed/{video_id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+
+    def soundcloud_replacer(match):
+        track_url = match.group(1)
+        return f'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url={track_url}&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>'
+
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'(?<!\*)\*(?!\*)(.*?)\*', r'<i>\1</i>', text)
-    text = re.sub(r'\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
+    text = re.sub(r'\!\[(.*?)\]\((.*?)\)', image_replacer, text)
+    text = re.sub(r'\@\[youtube\]\((.*?)\)', youtube_replacer, text)
+    text = re.sub(r'\@\[soundcloud\]\((.*?)\)', soundcloud_replacer, text)
+    text = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
     
     html_blocks = []
     # Split by double newlines to isolate blocks (paragraphs, headers, HTML divs)
@@ -57,6 +81,9 @@ def md_to_html(text):
             level = len(header_match.group(1))
             content = header_match.group(2).strip()
             html_blocks.append(f"<h{level}>{content}</h{level}>")
+        # Horizontal rules
+        elif block == '***' or block == '---':
+            html_blocks.append('<hr>')
         # If it already looks like HTML (starts with <), leave it alone
         elif block.startswith('<'):
             html_blocks.append(block)

@@ -16,13 +16,13 @@ output: Fun.html
 
 <div class="row">
 <div class="column">
-I am a massive fan of all flying things, especially birds. I dream to imitate flight on a budget. 
+I am a massive fan of all flying things, especially birds. I am constantly pursuing the imitatation of flight on a budget. 
 I built a remote-controlled aircraft adhering to the bare minimum for sustained flight and control. 
-I dare to call this one of the cheapest remote-controlled flying structures; the cost is not far from the price of a brushless motor and a Lithium-polymer battery. The control signals are transmitted using RF modules, not a reliable way to control the plane, but as you might have guessed, it is ridiculously cheap.
+I dare to call this one of the most affordable remote-controlled aircraft ever built; the total cost is approximately the price of a brushless motor and a Lithium-Polymer battery. The control signals are transmitted using RF modules-- certainly not a reliable way to control the plane, but it gets the job done.
 </div>
 <div class="column">
 <center>
-<img src="images/RC_Airplane.jpg"  style="width: 80%;" alt="RC Airplane">
+![RC Airplane](images/RC_Airplane.jpg)
 </center>
 </div>
 </div>
@@ -36,67 +36,67 @@ I like to draw in notebooks, it relieves stress.
 
 <div class="gallery">
 <a target="_blank" href="images/Drawings/A friend.jpg">
-<img src="images/Drawings/A friend_thumb.jpg" alt="A friend">
+![A friend](images/Drawings/A friend_thumb.jpg)
 </a>
 <div class="desc">A friend</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Amelia Earhart.png">
-<img src="images/Drawings/Amelia Earhart_thumb.png" alt="Amelia Earhart">
+![Amelia Earhart](images/Drawings/Amelia Earhart_thumb.png)
 </a>
 <div class="desc">Amelia Earhart</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Anne of Green Gables.jpg">
-<img src="images/Drawings/Anne of Green Gables_thumb.jpg" alt="Anne of Green Gables">
+![Anne of Green Gables](images/Drawings/Anne of Green Gables_thumb.jpg)
 </a>
 <div class="desc">Anne of Green Gables</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Ballerina.jpg">
-<img src="images/Drawings/Ballerina_thumb.jpg" alt="Ballerina">
+![Ballerina](images/Drawings/Ballerina_thumb.jpg)
 </a>
 <div class="desc">Ballerina</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Couples at night, Theory of Everything (2014) scene.jpg">
-<img src="images/Drawings/Couples at night, Theory of Everything (2014) scene_thumb.jpg" alt="Couples at night, Theory of Everything (2014) scene">
+![Couples at night, Theory of Everything (2014) scene](images/Drawings/Couples at night, Theory of Everything (2014) scene_thumb.jpg)
 </a>
 <div class="desc">Couples at night, Theory of Everything (2014) scene</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Dobby.png">
-<img src="images/Drawings/Dobby_thumb.png" alt="Dobby">
+![Dobby](images/Drawings/Dobby_thumb.png)
 </a>
 <div class="desc">Dobby</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Mickey.jpg">
-<img src="images/Drawings/Mickey_thumb.jpg" alt="Mickey">
+![Mickey](images/Drawings/Mickey_thumb.jpg)
 </a>
 <div class="desc">Mickey</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Pinocchio.jpeg">
-<img src="images/Drawings/Pinocchio_thumb.jpeg" alt="Pinocchio">
+![Pinocchio](images/Drawings/Pinocchio_thumb.jpeg)
 </a>
 <div class="desc">Pinocchio</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Rapunzel.jpg">
-<img src="images/Drawings/Rapunzel_thumb.jpg" alt="Rapunzel">
+![Rapunzel](images/Drawings/Rapunzel_thumb.jpg)
 </a>
 <div class="desc">Rapunzel</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Rose from Titanic(1997).jpg">
-<img src="images/Drawings/Rose from Titanic(1997)_thumb.jpg" alt="Rose from Titanic(1997)">
+![Rose from Titanic(1997)](images/Drawings/Rose from Titanic(1997)_thumb.jpg)
 </a>
 <div class="desc">Rose from Titanic(1997)</div>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Drawings/Snow White.jpg">
-<img src="images/Drawings/Snow White_thumb.jpg" alt="Snow White">
+![Snow White](images/Drawings/Snow White_thumb.jpg)
 </a>
 <div class="desc">Snow White</div>
 </div>
@@ -112,112 +112,112 @@ I like to draw in notebooks, it relieves stress.
 
 <div class="gallery">
 <a target="_blank" href="images/Photographs/0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048.jpg">
-<img src="images/Photographs/0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048_thumb.jpg" alt="0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048">
+![0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048](images/Photographs/0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048.jpg">
-<img src="images/Photographs/0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048_thumb.jpg" alt="0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048">
+![0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048](images/Photographs/0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/0D7A88D1-9208-45F3-8191-258FAD296258.jpeg">
-<img src="images/Photographs/0D7A88D1-9208-45F3-8191-258FAD296258_thumb.jpeg" alt="0D7A88D1-9208-45F3-8191-258FAD296258">
+![0D7A88D1-9208-45F3-8191-258FAD296258](images/Photographs/0D7A88D1-9208-45F3-8191-258FAD296258_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/0EFF301E-895B-40E8-BB2B-47EEB990149F.jpeg">
-<img src="images/Photographs/0EFF301E-895B-40E8-BB2B-47EEB990149F_thumb.jpeg" alt="0EFF301E-895B-40E8-BB2B-47EEB990149F">
+![0EFF301E-895B-40E8-BB2B-47EEB990149F](images/Photographs/0EFF301E-895B-40E8-BB2B-47EEB990149F_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/68A25130-1681-4B2B-9EBA-3D3C03EA74BD.jpeg">
-<img src="images/Photographs/68A25130-1681-4B2B-9EBA-3D3C03EA74BD_thumb.jpeg" alt="68A25130-1681-4B2B-9EBA-3D3C03EA74BD">
+![68A25130-1681-4B2B-9EBA-3D3C03EA74BD](images/Photographs/68A25130-1681-4B2B-9EBA-3D3C03EA74BD_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/8F4DE353-8AC4-4C75-996B-F7FD9B74E98B.jpeg">
-<img src="images/Photographs/8F4DE353-8AC4-4C75-996B-F7FD9B74E98B_thumb.jpeg" alt="8F4DE353-8AC4-4C75-996B-F7FD9B74E98B">
+![8F4DE353-8AC4-4C75-996B-F7FD9B74E98B](images/Photographs/8F4DE353-8AC4-4C75-996B-F7FD9B74E98B_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/91F5F1D3-026D-4C2D-AF0C-CF48DF95427A.jpeg">
-<img src="images/Photographs/91F5F1D3-026D-4C2D-AF0C-CF48DF95427A_thumb.jpeg" alt="91F5F1D3-026D-4C2D-AF0C-CF48DF95427A">
+![91F5F1D3-026D-4C2D-AF0C-CF48DF95427A](images/Photographs/91F5F1D3-026D-4C2D-AF0C-CF48DF95427A_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_0170.jpg">
-<img src="images/Photographs/IMG_0170_thumb.jpg" alt="IMG 0170">
+![IMG 0170](images/Photographs/IMG_0170_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_0239.jpg">
-<img src="images/Photographs/IMG_0239_thumb.jpg" alt="IMG 0239">
+![IMG 0239](images/Photographs/IMG_0239_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_0240.jpg">
-<img src="images/Photographs/IMG_0240_thumb.jpg" alt="IMG 0240">
+![IMG 0240](images/Photographs/IMG_0240_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_0412 Large.jpeg">
-<img src="images/Photographs/IMG_0412 Large_thumb.jpeg" alt="IMG 0412 Large">
+![IMG 0412 Large](images/Photographs/IMG_0412 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_0485 Large.jpeg">
-<img src="images/Photographs/IMG_0485 Large_thumb.jpeg" alt="IMG 0485 Large">
+![IMG 0485 Large](images/Photographs/IMG_0485 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_1131 Large.jpeg">
-<img src="images/Photographs/IMG_1131 Large_thumb.jpeg" alt="IMG 1131 Large">
+![IMG 1131 Large](images/Photographs/IMG_1131 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_1204 Large.jpeg">
-<img src="images/Photographs/IMG_1204 Large_thumb.jpeg" alt="IMG 1204 Large">
+![IMG 1204 Large](images/Photographs/IMG_1204 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_1357 Large.jpeg">
-<img src="images/Photographs/IMG_1357 Large_thumb.jpeg" alt="IMG 1357 Large">
+![IMG 1357 Large](images/Photographs/IMG_1357 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_1429 Large.jpeg">
-<img src="images/Photographs/IMG_1429 Large_thumb.jpeg" alt="IMG 1429 Large">
+![IMG 1429 Large](images/Photographs/IMG_1429 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_1464 Large.jpeg">
-<img src="images/Photographs/IMG_1464 Large_thumb.jpeg" alt="IMG 1464 Large">
+![IMG 1464 Large](images/Photographs/IMG_1464 Large_thumb.jpeg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_20160507_183556501.jpg">
-<img src="images/Photographs/IMG_20160507_183556501_thumb.jpg" alt="IMG 20160507 183556501">
+![IMG 20160507 183556501](images/Photographs/IMG_20160507_183556501_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_20160730_084935954.jpg">
-<img src="images/Photographs/IMG_20160730_084935954_thumb.jpg" alt="IMG 20160730 084935954">
+![IMG 20160730 084935954](images/Photographs/IMG_20160730_084935954_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_20161207_105712762.jpg">
-<img src="images/Photographs/IMG_20161207_105712762_thumb.jpg" alt="IMG 20161207 105712762">
+![IMG 20161207 105712762](images/Photographs/IMG_20161207_105712762_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_20190130_091906835-EFFECTS.jpg">
-<img src="images/Photographs/IMG_20190130_091906835-EFFECTS_thumb.jpg" alt="IMG 20190130 091906835-EFFECTS">
+![IMG 20190130 091906835-EFFECTS](images/Photographs/IMG_20190130_091906835-EFFECTS_thumb.jpg)
 </a>
 </div>
 <div class="gallery">
 <a target="_blank" href="images/Photographs/IMG_20190130_113834823.jpg">
-<img src="images/Photographs/IMG_20190130_113834823_thumb.jpg" alt="IMG 20190130 113834823">
+![IMG 20190130 113834823](images/Photographs/IMG_20190130_113834823_thumb.jpg)
 </a>
 </div>
 <!-- PHOTOS_END -->
@@ -226,19 +226,20 @@ I like to draw in notebooks, it relieves stress.
 
 ### Make Chocolate from Scratch
 
-I like chocolate, mainly because of its chemical richness, its taste does not come from a single molecule unlike many other flavors, for example, vanilla. 
-I learned how to make chocolate from scratch and it is worth the effort.
+I like chocolate, mainly because of its chemical richness.
+Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. 
+I learned how to make chocolate from scratch and it is well orth the effort.
 <br><br>
 <div class="image-grid">
-<img src="images/Chocolate/Beans.jpg" alt="Coco Beans">
-<img src="images/Chocolate/Chocolate.jpg" alt="Chocolate">
+![Coco Beans](images/Chocolate/Beans.jpg)
+![Chocolate](images/Chocolate/Chocolate.jpg)
 </div>
 
 ### Music
 
-Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome shame.
+Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome the cringe phase.
 <br><br>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>
+@[soundcloud](https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true)
 <div style="font-size: 10px; color: var(--text-color); opacity: 0.7; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: inherit; font-weight: 100;"><a href="https://soundcloud.com/mathew-alex-238381510" title="Mathew Alex" target="_blank" style="color: var(--text-color); text-decoration: none;">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG" title="Her" target="_blank" style="color: var(--text-color); text-decoration: none;">Her</a></div>
 
 </div> <!-- End of toc-content -->

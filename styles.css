@@ -106,6 +106,10 @@ site-header {
     .profile-img {
         filter: grayscale(100%);
     }
+
+    img.diagram {
+        filter: invert(1) hue-rotate(180deg);
+    }
 }
 
 /* TOC Styles */

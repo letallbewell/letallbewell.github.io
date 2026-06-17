@@ -1,0 +1,429 @@
+---
+title: About me
+output: index.html
+---
+
+<p><i>Physics student, previously machine learning engineer, trying hard to be useful.</i></p>
+
+<div style="display: flex; gap: 2rem; align-items: flex-end; margin: 3em 0;">
+    <img src="images/Profile.jpg" alt="Profile picture" class="profile-img" style="width: 200px;">
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; font-weight: 600; font-family: ui-monospace, monospace; margin-bottom: 0.5rem;">
+      <a href="https://github.com/letallbewell" target="_blank" style="text-decoration: none;">[ GitHub ]</a>
+      <a href="https://scholar.google.com/citations?user=0haEg2cAAAAJ&hl=en" target="_blank" style="text-decoration: none;">[ Google Scholar ]</a>
+      <a href="https://drive.google.com/file/d/1hDcspyUNbRTRUlN4uVqHvF6GRQ5F1dBW/view?usp=sharing" target="_blank" style="text-decoration: none;">[ CV ]</a>
+      <a href="https://www.linkedin.com/in/mathew-alex-27a41b1b2/" target="_blank" style="text-decoration: none;">[ LinkedIn ]</a>
+      <a href="mailto:mathewalex1908@gmail.com" style="text-decoration: none;">[ Email ]</a>
+    </div>
+</div>
+
+<br>
+<div style="line-height: 1.6; max-width: 65ch;">
+  <p>Several paragraphs about me will be here soon.</p>
+  <p><i>"Human endeavor should be limitless; we are built to be spent. A great love is a flawed love. I feel full, and my adventure is plenty."</i></p>
+</div>
+---
+title: Research
+output: Research.html
+---
+
+<mark> <b>In progress</b> </mark> 
+
+<br><br>
+<div class="toc-container">
+<nav class="toc">
+<b>Contents</b>
+<ul id="toc-list"></ul>
+</nav>
+
+<div class="toc-content">
+
+## Research & Publications
+
+### Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics
+
+<p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem, symmetries that preserve the action integral map one to one to conservation laws. Most physics equations are conservation laws, often what does not change, the conserved quantities, give us more insight when we model what does change through PDEs. </p>
+
+<p>My MSc thesis involved computing the point symmetries and conservation laws (via Noether's theorem) of the exact equations of motion of an elastic string. The literature on this topic is sparse and confusing, at least to me. But to put it simply, the answer is not the linear wave equation. If we enforce all the physics, the final equation takes the form 
+$$ \partial_t^2 \vec{r}(x,t) = \partial_x \left( T (\lambda) \, \widehat{\partial_x \vec{r}} \right)$$
+where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) and which starts at arc-length \( x \) on the reference configuration (can be flat or curved), \( T(\lambda) \) is the tension as a function of the stretch \( \lambda = |\partial_x \vec{r}| - 1 \), and \( \widehat{\partial_x \vec{r}} \) is the unit tangent vector in the current configuration.</p>
+
+<p>Please find the details of the derivation of this equation, its characterisitic curves, the symmetries and conservation laws admitted by this equation with physical interpretations in my thesis:
+
+#### <a href="https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16">Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities</a>, Mathew Alex, 2025.
+
+</p>
+
+<p>The extension of this equation to two-dimensions (a membrane like a piece of cloth) is even more tricky. But the obvious generalization of 
+upgrading \( \partial_x \) to a covariant derivattive defined on the reference configuration, \( T \) to a tensor depending on the metric tensor of the current configuration and contracted with the two surface basis vectors (instetad of the the one \( \widehat{\partial_x \vec{r}} \) for a curve) and two coordinates \( x^1\) and \(x^2 \), turns out to be correct. More on that in the near future.</p>
+
+### Patent Landscape Study of Quantum Technologies
+
+<p>In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.</p>
+
+<div>
+#### <a href="https://arxiv.org/abs/2102.04552">Quantum Technologies: A Review of the Patent Landscape</a>, Mathew Alex, 2021.
+
+#### Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a>
+
+<img src="images/Quantum_Technologies_Taxonomy.png" alt="Quantum Technologies Taxonomy" class="center diagram">
+</div>
+
+<br><hr><br>
+## Computational Projects
+
+### Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+
+<p>The Navier-Stokes equations (mass, momentum, and energy continuity. equations for fluids) can describe phenomena ranging from a stirred cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Numerical algorithms require massive parallelization to be of use and there are pesky numerical instabilities. </p>
+
+<p>I studied the driven lid cavity problem (think of a 2D box stirred from the top edge) for my MSc thesis using the Lattice Boltzmann method (LBM). LBM is a numerical scheme stemming from kinetic theory using a discretized version of the Boltzmann equation with an ad-hoc collision operator defined to emulate fluid behavior. Since it only uses array movements and arithmetic operations, LBM is economical in the low Reynolds number regime where the LBM approximation is more faithful.</p>
+
+<div class="row">
+<div class="column-3">
+<iframe width="100%" src="https://www.youtube.com/embed/4Aa55GaYGbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="column-3">
+<iframe width="100%" src="https://www.youtube.com/embed/pkpIo9ZMNyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="column-3">
+<iframe width="100%" src="https://www.youtube.com/embed/talJ0ecWuJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+
+### Tensor Networks, Renormalization, and Phase Transitions
+
+<p>My work in statistical mechanics explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:</p>
+
+#### Tensor Network Contractions <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+
+<p>Representing the partition function as a Tensor Network(TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.</p>
+<p>The following tensor network contraction gives the partition function for the Ising Hamiltonian on a lattice with periodic boundary conditions (full contraction of larger networks takes a long time).</p>
+<img src="images/TN_contraction.jpg" alt="Naive contraction" class="center diagram">
+
+<p>We can see that the code works by checking the thermodynamic variables (these results are exact).</p>
+<img src="images/TN_E&Cv.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
+
+#### Monte-Carlo Simulations
+
+<p>Driving random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.</p>
+<p>Results can be compared against a Monte Carlo simulation. See <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for the results of an \( 8\times8 \) lattice:</p>
+<img src="images/MC_Samples.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
+<img src="images/MC_Results.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
+
+#### Renormalization Group (RG) Methods
+
+<p>Analyzing the flow of coupling constants through real-space decimation to estimate the number of phases.</p>
+
+<p>First, let us use the 1D Ising model defined by the Hamiltonian
+$$ H = -J \sum_{i} s_i s_{i+1},$$
+where \( s_i = \pm 1 \) are the spin variables and \( J \) is the coupling constant, to illustrate the RG flow.</p>
+
+<p>The partition function is given by
+$$ Z = \sum_{\{s_i\}} e^{-\beta H} = \sum_{\{s_i\}} \prod_{i} e^{\beta J s_i s_{i+1}}.$$</p>
+
+<p>The idea is to delete every other spin while keeping \( Z \) invariant. This leads to a new effective Hamiltonian with a renormalized coupling constant \( J' \). We can easily show that \( J \) flows to two trivial fixed points: \( J = 0 \) (high temperature, disordered phase) and \( J = \infty \) (low temperature, ordered phase). This is one way to see that the 1D Ising model has no phase transition.</p>
+
+<p>Although 1D Ising model is exactly solvable, the RG flow provides a more intuitive picture of the physics, which is especially useful for higher-dimensional models where exact solutions are not available. In the 2D Ising model, the RG flow reveals a non-trivial fixed point corresponding to the critical temperature, indicating the presence of a phase transition. The flow diagram below illustrates this behavior, showing how the coupling constant evolves under successive RG transformations. Unlike the 1D case, adjusting \( J \) will not keep \( Z \) constant. But in terms of two parameters \( K \) and \( L \), we can re-parametrize the problem such that the RG flow is well-defined. The flow diagram shows that there are two stable fixed points corresponding to the ordered and disordered phases, and an unstable fixed point corresponding to the critical point of the phase transition.</p>
+<img src="images/2D_Ising_RG_flow.png" alt="2D Ising RG Flow" class="center diagram">
+
+<!-- <p><b>Ongoing Work:</b> I am currently developing a rigorous numerical Renormalization Group (RG) argument to demonstrate the phase transition of the 2D Ising model. By tracking the flow of effective coupling constants through real-space decimation, this approach maps the system's trajectory toward trivial or critical fixed points. I plan to extend this formulation into a broader research-level mathematical framework in the future.</p> -->
+
+<p><b>References:</b></p>
+<ul>
+<li>F. Schwabl and W.D. Brewer. <i>Statistical Mechanics</i>. Advanced Texts in Physics. Springer Berlin Heidelberg, 2006. ISBN: 9783540323433.</li>
+<li>Humphrey J. Maris and Leo P. Kadanoff. "Teaching the renormalization group". In: <i>American Journal of Physics</i> 46.6 (1978), pp. 652–657.</li>
+</ul>
+
+### Cosmology
+
+<img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
+
+<p>We would not be here if not for dark matter. Matter cannot aggregate gravitationally to form structures due to radiation pressure until the universe can cool down considerably. However, dark matter interacts gravitationally alone so that it could form bound structures and gravitational potential buckets for the matter to fall in later when the universe cooled down. Stars later lit up the 'dark' dark matter haloes!</p>
+
+<p>Understanding the nature of primordial fluctuations—the seeds of all structures in the universe—is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation codes, such as <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connect these early fluctuations to present-day large-scale structures.</p>
+
+<!-- <p><b>Ongoing Work:</b> While standard cosmological simulations rely on tree-code approximations to handle vast numbers of particles efficiently, I am trying to develop a full, unapproximated \(O(N^2)\) direct force computation. By heavily parallelizing the gravitational interactions using CUDA, our goal is to eliminate approximation errors entirely and publish the results.</p> -->
+
+<iframe class="center" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+
+<p>The Lorenz system arose in a simplified description of atmospheric convection and is, probably, the best-known example of a chaotic system. This system is defined by the following differential equations:</p>
+
+$$ \frac{dx}{dt} = \sigma \left( y - x \right),$$
+
+$$ \frac{dy}{dt} = x \left( \rho - z \right)  - y \text{ , and, } $$
+
+$$ \frac{dz}{dt} = xy - \beta z.$$
+
+<p>\( \alpha, \beta, \) and \( \sigma \) are constants.</p>
+
+<p>The defining property of chaotic systems is that <b>approximate initial conditions cannot predict approximate futures whereas exact initial conditions can predict exact future</b>.</p>
+
+<p>
+The popular notion of the butterfly effect (the flap of a butterfly's wing later developing into a tornado) is a metaphorical version of this phenomenona of sensitive dependence on initial conditions.
+To this romanticization's merit, the shape of the solutions of the Lorenz system also resembles a butterfly.
+</p>
+
+
+<p>A particle cloud of \( N = 1000 \), points starting about \( [1, 1, 1] \), is integrated this way. You can see how quickly these particles (red dots) diverge from the solution for the starting point \( [1, 1, 1] \) (golden curve).</p>
+
+<iframe class="center" src="https://www.youtube.com/embed/RIgKHnjR-XE?si=K0bOBPF62kXlXL48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+
+<p>Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner,</a> is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.</p>
+
+<p>In one-dimension, the second derivative can be approximated as a difference, and the Schrodinger equation equates to a matrix eigenvalue problem after discretizing the potential. This formalism can easily be extended to three-dimensions using tensor products to solve the Hydrogen atom and the three-dimensional harmonic oscillator:</p>
+
+<div class="image-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+<img src="images/Hydrogen_Atom.jpeg" alt="Hydrogen Atom">
+<img src="images/Harmonic_Oscillator.png" alt="Harmonic Oscillator">
+</div>
+
+</div> <!-- End of toc-content -->
+</div> <!-- End of toc-container -->---
+title: Interests
+output: Fun.html
+---
+
+<br><br>
+<div class="toc-container">
+<nav class="toc">
+<b>Contents</b>
+<ul id="toc-list"></ul>
+</nav>
+
+<div class="toc-content">
+
+### Make and Fly Cheap RC Airplanes
+
+<div class="row">
+<div class="column">
+I am a massive fan of all flying things, especially birds. I dream to imitate flight on a budget. 
+I built a remote-controlled aircraft adhering to the bare minimum for sustained flight and control. 
+I dare to call this one of the cheapest remote-controlled flying structures; the cost is not far from the price of a brushless motor and a Lithium-polymer battery. The control signals are transmitted using RF modules, not a reliable way to control the plane, but as you might have guessed, it is ridiculously cheap.
+</div>
+<div class="column">
+<center>
+<img src="images/RC_Airplane.jpg"  style="width: 80%;" alt="RC Airplane">
+</center>
+</div>
+</div>
+
+### Drawings
+
+I like to draw in notebooks, it relieves stress.
+<br>
+<div id="drawings-gallery">
+<!-- DRAWINGS_START -->
+
+<div class="gallery">
+<a target="_blank" href="images/Drawings/A friend.jpg">
+<img src="images/Drawings/A friend_thumb.jpg" alt="A friend">
+</a>
+<div class="desc">A friend</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Amelia Earhart.png">
+<img src="images/Drawings/Amelia Earhart_thumb.png" alt="Amelia Earhart">
+</a>
+<div class="desc">Amelia Earhart</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Anne of Green Gables.jpg">
+<img src="images/Drawings/Anne of Green Gables_thumb.jpg" alt="Anne of Green Gables">
+</a>
+<div class="desc">Anne of Green Gables</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Ballerina.jpg">
+<img src="images/Drawings/Ballerina_thumb.jpg" alt="Ballerina">
+</a>
+<div class="desc">Ballerina</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Couples at night, Theory of Everything (2014) scene.jpg">
+<img src="images/Drawings/Couples at night, Theory of Everything (2014) scene_thumb.jpg" alt="Couples at night, Theory of Everything (2014) scene">
+</a>
+<div class="desc">Couples at night, Theory of Everything (2014) scene</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Dobby.png">
+<img src="images/Drawings/Dobby_thumb.png" alt="Dobby">
+</a>
+<div class="desc">Dobby</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Mickey.jpg">
+<img src="images/Drawings/Mickey_thumb.jpg" alt="Mickey">
+</a>
+<div class="desc">Mickey</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Pinocchio.jpeg">
+<img src="images/Drawings/Pinocchio_thumb.jpeg" alt="Pinocchio">
+</a>
+<div class="desc">Pinocchio</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Rapunzel.jpg">
+<img src="images/Drawings/Rapunzel_thumb.jpg" alt="Rapunzel">
+</a>
+<div class="desc">Rapunzel</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Rose from Titanic(1997).jpg">
+<img src="images/Drawings/Rose from Titanic(1997)_thumb.jpg" alt="Rose from Titanic(1997)">
+</a>
+<div class="desc">Rose from Titanic(1997)</div>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Drawings/Snow White.jpg">
+<img src="images/Drawings/Snow White_thumb.jpg" alt="Snow White">
+</a>
+<div class="desc">Snow White</div>
+</div>
+<!-- DRAWINGS_END -->
+</div>
+
+
+### Photos
+
+<br>
+<div id="photos-gallery">
+<!-- PHOTOS_START -->
+
+<div class="gallery">
+<a target="_blank" href="images/Photographs/0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048.jpg">
+<img src="images/Photographs/0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048_thumb.jpg" alt="0B2VQlLr4JNMhR2JBX2V5dEMyUjQ=s2048">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048.jpg">
+<img src="images/Photographs/0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048_thumb.jpg" alt="0B2VQlLr4JNMhWHlqUVRJNVNyQXc=s2048">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/0D7A88D1-9208-45F3-8191-258FAD296258.jpeg">
+<img src="images/Photographs/0D7A88D1-9208-45F3-8191-258FAD296258_thumb.jpeg" alt="0D7A88D1-9208-45F3-8191-258FAD296258">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/0EFF301E-895B-40E8-BB2B-47EEB990149F.jpeg">
+<img src="images/Photographs/0EFF301E-895B-40E8-BB2B-47EEB990149F_thumb.jpeg" alt="0EFF301E-895B-40E8-BB2B-47EEB990149F">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/68A25130-1681-4B2B-9EBA-3D3C03EA74BD.jpeg">
+<img src="images/Photographs/68A25130-1681-4B2B-9EBA-3D3C03EA74BD_thumb.jpeg" alt="68A25130-1681-4B2B-9EBA-3D3C03EA74BD">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/8F4DE353-8AC4-4C75-996B-F7FD9B74E98B.jpeg">
+<img src="images/Photographs/8F4DE353-8AC4-4C75-996B-F7FD9B74E98B_thumb.jpeg" alt="8F4DE353-8AC4-4C75-996B-F7FD9B74E98B">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/91F5F1D3-026D-4C2D-AF0C-CF48DF95427A.jpeg">
+<img src="images/Photographs/91F5F1D3-026D-4C2D-AF0C-CF48DF95427A_thumb.jpeg" alt="91F5F1D3-026D-4C2D-AF0C-CF48DF95427A">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_0170.jpg">
+<img src="images/Photographs/IMG_0170_thumb.jpg" alt="IMG 0170">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_0239.jpg">
+<img src="images/Photographs/IMG_0239_thumb.jpg" alt="IMG 0239">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_0240.jpg">
+<img src="images/Photographs/IMG_0240_thumb.jpg" alt="IMG 0240">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_0412 Large.jpeg">
+<img src="images/Photographs/IMG_0412 Large_thumb.jpeg" alt="IMG 0412 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_0485 Large.jpeg">
+<img src="images/Photographs/IMG_0485 Large_thumb.jpeg" alt="IMG 0485 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_1131 Large.jpeg">
+<img src="images/Photographs/IMG_1131 Large_thumb.jpeg" alt="IMG 1131 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_1204 Large.jpeg">
+<img src="images/Photographs/IMG_1204 Large_thumb.jpeg" alt="IMG 1204 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_1357 Large.jpeg">
+<img src="images/Photographs/IMG_1357 Large_thumb.jpeg" alt="IMG 1357 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_1429 Large.jpeg">
+<img src="images/Photographs/IMG_1429 Large_thumb.jpeg" alt="IMG 1429 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_1464 Large.jpeg">
+<img src="images/Photographs/IMG_1464 Large_thumb.jpeg" alt="IMG 1464 Large">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_20160507_183556501.jpg">
+<img src="images/Photographs/IMG_20160507_183556501_thumb.jpg" alt="IMG 20160507 183556501">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_20160730_084935954.jpg">
+<img src="images/Photographs/IMG_20160730_084935954_thumb.jpg" alt="IMG 20160730 084935954">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_20161207_105712762.jpg">
+<img src="images/Photographs/IMG_20161207_105712762_thumb.jpg" alt="IMG 20161207 105712762">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_20190130_091906835-EFFECTS.jpg">
+<img src="images/Photographs/IMG_20190130_091906835-EFFECTS_thumb.jpg" alt="IMG 20190130 091906835-EFFECTS">
+</a>
+</div>
+<div class="gallery">
+<a target="_blank" href="images/Photographs/IMG_20190130_113834823.jpg">
+<img src="images/Photographs/IMG_20190130_113834823_thumb.jpg" alt="IMG 20190130 113834823">
+</a>
+</div>
+<!-- PHOTOS_END -->
+</div>
+
+
+### Make Chocolate from Scratch
+
+I like chocolate, mainly because of its chemical richness, its taste does not come from a single molecule unlike many other flavors, for example, vanilla. 
+I learned how to make chocolate from scratch and it is worth the effort.
+<br><br>
+<div class="image-grid">
+<img src="images/Chocolate/Beans.jpg" alt="Coco Beans">
+<img src="images/Chocolate/Chocolate.jpg" alt="Chocolate">
+</div>
+
+### Music
+
+Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome shame.
+<br><br>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>
+<div style="font-size: 10px; color: var(--text-color); opacity: 0.7; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: inherit; font-weight: 100;"><a href="https://soundcloud.com/mathew-alex-238381510" title="Mathew Alex" target="_blank" style="color: var(--text-color); text-decoration: none;">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG" title="Her" target="_blank" style="color: var(--text-color); text-decoration: none;">Her</a></div>
+
+</div> <!-- End of toc-content -->
+</div> <!-- End of toc-container -->
