@@ -3,7 +3,9 @@ title: Interests
 output: Fun.html
 ---
 
-<br><br>
+
+
+
 <div class="toc-container">
 <nav class="toc">
 <b>Contents</b>
@@ -30,7 +32,9 @@ I dare to call this one of the most affordable remote-controlled aircraft ever b
 ### Drawings
 
 I like to draw in notebooks, it relieves stress.
-<br>
+
+
+
 <div id="drawings-gallery">
 <!-- DRAWINGS_START -->
 
@@ -106,7 +110,9 @@ I like to draw in notebooks, it relieves stress.
 
 ### Photos
 
-<br>
+
+
+
 <div id="photos-gallery">
 <!-- PHOTOS_START -->
 
@@ -229,7 +235,9 @@ I like to draw in notebooks, it relieves stress.
 I like chocolate, mainly because of its chemical richness.
 Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. 
 I learned how to make chocolate from scratch and it is well orth the effort.
-<br><br>
+
+
+
 <div class="image-grid">
 ![Coco Beans](images/Chocolate/Beans.jpg)
 ![Chocolate](images/Chocolate/Chocolate.jpg)
@@ -238,8 +246,10 @@ I learned how to make chocolate from scratch and it is well orth the effort.
 ### Music
 
 Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome the cringe phase.
-<br><br>
-@[soundcloud](https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true)
+
+
+
+@[soundcloud](https%3A//api.soundcloud.com/tracks/1568488519%3Fsecret_token%3Ds-7kQaNGfNBoG)
 <div style="font-size: 10px; color: var(--text-color); opacity: 0.7; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: inherit; font-weight: 100;"><a href="https://soundcloud.com/mathew-alex-238381510" title="Mathew Alex" target="_blank" style="color: var(--text-color); text-decoration: none;">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG" title="Her" target="_blank" style="color: var(--text-color); text-decoration: none;">Her</a></div>
 
 </div> <!-- End of toc-content -->

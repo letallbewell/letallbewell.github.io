@@ -57,7 +57,7 @@ def md_to_html(text):
 
     def soundcloud_replacer(match):
         track_url = match.group(1)
-        return f'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url={track_url}&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>'
+        return f'<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={track_url}&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>'
 
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'(?<!\*)\*(?!\*)(.*?)\*', r'<i>\1</i>', text)

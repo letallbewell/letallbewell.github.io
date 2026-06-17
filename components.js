@@ -79,9 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Indent based on header level
             if (header.tagName === 'H3') {
                 li.style.marginLeft = '1rem';
+                a.textContent = '— ' + text;
             } else if (header.tagName === 'H4') {
                 li.style.marginLeft = '2rem';
                 a.style.fontSize = '0.9em';
+                a.textContent = '— ' + text;
             }
             
             li.appendChild(a);
