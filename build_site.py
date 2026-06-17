@@ -63,6 +63,10 @@ def md_to_html(text):
         name = match.group(1)
         return f'<div id="{name.lower()}-gallery">\n<!-- {name.upper()}_START -->\n<!-- {name.upper()}_END -->\n</div>'
 
+    def github_replacer(match):
+        url = match.group(1)
+        return f'<button onclick="location.href=\'{url}\'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button>'
+
     text = text.replace('@[toc]', '<!-- TOC_MARKER -->')
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'(?<!\*)\*(?!\*)(.*?)\*', r'<i>\1</i>', text)
@@ -70,7 +74,13 @@ def md_to_html(text):
     text = re.sub(r'\@\[youtube\]\((.*?)\)', youtube_replacer, text)
     text = re.sub(r'\@\[soundcloud\]\((.*?)\)', soundcloud_replacer, text)
     text = re.sub(r'\@\[gallery\]\((.*?)\)', gallery_replacer, text)
+    text = re.sub(r'\@\[github\]\((.*?)\)', github_replacer, text)
     text = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
+    
+    # Ensure containers are split into their own blocks
+    text = re.sub(r'(?m)^(:::.*)$', r'\n\n\1\n\n', text)
+    # Clean up excess newlines
+    text = re.sub(r'\n{3,}', '\n\n', text)
     
     html_blocks = []
     # Split by double newlines to isolate blocks (paragraphs, headers, HTML divs)

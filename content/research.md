@@ -24,18 +24,19 @@ where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) and
 
 For detailed derivations of the string equation, its characteristic curves, the symmetries and the symmetries and conservation laws admitted by this equation along with their physical interpretations in my thesis:
 
-#### <a href="https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16">Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities</a>, Mathew Alex, 2025.
+#### [Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities](https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16), Mathew Alex, 2025.
 
 Extending this equation to two-dimensions to describe the motion of a membrane (like a piece of cloth) turns out to be even more tricky. More on that in the near future.
 
 ### Patent Landscape Study of Quantum Technologies
 
-In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.
+In 2021, I wrote a patent landscape study report for [Relecura Technologies](https://relecura.com/), analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.
 
 ::: div
-#### <a href="https://arxiv.org/abs/2102.04552">Quantum Technologies: A Review of the Patent Landscape</a>, Mathew Alex, 2021.
 
-#### Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a>
+#### [Quantum Technologies: A Review of the Patent Landscape](https://arxiv.org/abs/2102.04552), Mathew Alex, 2021.
+
+#### Taxonomy of the technologies [(Interactive Version)](https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef)
 
 ![Quantum Technologies Taxonomy](images/Quantum_Technologies_Taxonomy.png#center diagram)
 :::
@@ -44,7 +45,7 @@ In 2021, I wrote a patent landscape study report for <a href="https://relecura.c
 
 ## Computational Projects
 
-### Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+### Fluid Dynamics @[github](https://github.com/letallbewell/Lattice-Boltzmann) 
 
 The Navier-Stokes equations (mass, momentum, and energy continuity equations for fluids) can describe phenomena ranging from a stirred cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Numerical algorithms require massive parallelization to be of use and there are pesky numerical instabilities to deal with. 
 
@@ -66,7 +67,7 @@ I studied the driven lid cavity problem (think of a 2D box stirred from the top 
 
 I did an independent research project in statistical mechanics that explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:
 
-#### Tensor Network Contractions <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+#### Tensor Network Contractions @[github](https://github.com/letallbewell/Tensor-Network-Contraction) 
 
 Representing the partition function as a Tensor Network(TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.
 
@@ -82,7 +83,7 @@ We can see that the code works by checking thermodynamic variables (these result
 
 Driving random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.
 
-Results can be compared against a Monte Carlo simulation. See <a href="https://github.com/letallbewell/Ising_Model">Ising Model</a> for the results of an \( 8\times8 \) lattice:
+Results can be compared against a Monte Carlo simulation. See [Ising Model](https://github.com/letallbewell/Ising_Model) for the results of an \( 8\times8 \) lattice:
 
 ![Energy and Specific Heat Capacity](images/MC_Samples.jpg#center diagram)
 ![Energy and Specific Heat Capacity](images/MC_Results.jpg#center diagram)
@@ -115,14 +116,14 @@ Although 1D Ising model is exactly solvable, the RG flow provides a more intuiti
 
 Ordinary matter cannot aggregate gravitationally to form structures due to immense radiation pressure until the universe cools down considerably. However, dark matter interacts exclusive via gravity. This property allows it to form bound structures in the early universe, effectively creating gravitational potential wells for ordinary matter to fall in later when the universe cools down.
 
-Understanding the nature of primordial fluctuations—-the seed of all structures in the universe—-is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation codes, such as <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connect these early fluctuations to present-day large-scale dark matter structure.
+Understanding the nature of primordial fluctuations—-the seed of all structures in the universe—-is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation codes, such as [Gadget-II](https://wwwmpa.mpa-garching.mpg.de/gadget/), which connect these early fluctuations to present-day large-scale dark matter structure.
 
 <!-- **Ongoing Work:** While standard cosmological simulations rely on tree-code approximations to handle vast numbers of particles efficiently, I am trying to develop a full, unapproximated \(O(N^2)\) direct force computation. By heavily parallelizing the gravitational interactions using CUDA, our goal is to eliminate approximation errors entirely and publish the results.
  -->
 
 @[youtube](Dguvi2uA_KU#center)
 
-### Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+### Chaos in the Lorenz Attractor System @[github](https://github.com/letallbewell/Lorenz-System) 
 
 The Lorenz system arose in a simplified description of atmospheric convection and is, probably, the best-known example of a chaotic system. This system is defined by the following differential equations:
 
@@ -143,9 +144,9 @@ A particle cloud of \( N = 1000 \), points starting about \( [1, 1, 1] \), is in
 
 @[youtube](RIgKHnjR-XE#center)
 
-### Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button> 
+### Quantum Mechanics @[github](https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions) 
 
-Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner</a>) is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.
+Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  [Principles of Quantum Mechanics, David Skinner](http://www.damtp.cam.ac.uk/user/dbs26/PQM.html)) is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.
 
 In one-dimension, the second derivative can be approximated as a difference, and the Schrodinger equation equates to a matrix eigenvalue problem after discretizing the potential. This formalism can easily be extended to three-dimensions using tensor products to solve the Hydrogen atom and the three-dimensional harmonic oscillator:
 
