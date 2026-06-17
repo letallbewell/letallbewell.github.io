@@ -59,11 +59,17 @@ def md_to_html(text):
         track_url = match.group(1)
         return f'<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={track_url}&color=%23959e96&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="border: 1px solid var(--border-color); border-radius: 8px; aspect-ratio: auto; height: 166px;"></iframe>'
 
+    def gallery_replacer(match):
+        name = match.group(1)
+        return f'<div id="{name.lower()}-gallery">\n<!-- {name.upper()}_START -->\n<!-- {name.upper()}_END -->\n</div>'
+
+    text = text.replace('@[toc]', '<!-- TOC_MARKER -->')
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'(?<!\*)\*(?!\*)(.*?)\*', r'<i>\1</i>', text)
     text = re.sub(r'\!\[(.*?)\]\((.*?)\)', image_replacer, text)
     text = re.sub(r'\@\[youtube\]\((.*?)\)', youtube_replacer, text)
     text = re.sub(r'\@\[soundcloud\]\((.*?)\)', soundcloud_replacer, text)
+    text = re.sub(r'\@\[gallery\]\((.*?)\)', gallery_replacer, text)
     text = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', text)
     
     html_blocks = []
@@ -84,6 +90,12 @@ def md_to_html(text):
         # Horizontal rules
         elif block == '***' or block == '---':
             html_blocks.append('<hr>')
+        # Containers
+        elif block.startswith('::: '):
+            classes = block[4:].strip()
+            html_blocks.append(f'<div class="{classes}">')
+        elif block == ':::':
+            html_blocks.append('</div>')
         # If it already looks like HTML (starts with <), leave it alone
         elif block.startswith('<'):
             html_blocks.append(block)
@@ -92,7 +104,18 @@ def md_to_html(text):
             block = block.replace('\n', '<br>')
             html_blocks.append(f"<p>{block}</p>")
             
-    return '\n\n'.join(html_blocks)
+    final_html = '\n\n'.join(html_blocks)
+    if '<!-- TOC_MARKER -->' in final_html:
+        toc_snippet = '''<div class="toc-container">
+<nav class="toc">
+<b>Contents</b>
+<ul id="toc-list"></ul>
+</nav>
+<div class="toc-content">'''
+        final_html = final_html.replace('<!-- TOC_MARKER -->', toc_snippet)
+        final_html += '\n</div>\n</div>'
+        
+    return final_html
 
 def build_site():
     base_dir = os.path.dirname(os.path.abspath(__file__))

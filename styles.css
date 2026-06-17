@@ -229,4 +229,4 @@ site-header {
     .video-grid {
         grid-template-columns: 1fr;
     }
-}
+}.text-center { text-align: center; display: flex; justify-content: center; }
