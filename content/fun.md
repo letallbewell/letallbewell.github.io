@@ -39,13 +39,7 @@ I like chocolate, mainly because of its chemical richness.
 Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. 
 I learned how to make chocolate from scratch and it is well orth the effort.
 
-::: image-grid
-
-![Coco Beans](images/Chocolate/Beans.jpg)
-
-![Chocolate](images/Chocolate/Chocolate.jpg)
-
-:::
+@[gallery](Chocolate)
 
 ### Music
 

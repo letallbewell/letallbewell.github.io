@@ -1,38 +1,5 @@
 // Theme is now handled entirely by native CSS @media (prefers-color-scheme)
 
-class SiteHeader extends HTMLElement {
-  connectedCallback() {
-    // Detect if we are inside a subfolder (like /posts/) so we can adjust relative links for local testing
-    const isSubfolder = window.location.pathname.includes('/posts/');
-    const p = isSubfolder ? '../' : '';
-
-    const path = window.location.pathname;
-    const isResearch = path.endsWith('Research.html');
-    const isPosts = path.includes('Posts') || path.includes('/posts/');
-    const isFun = path.endsWith('Fun.html');
-    // If it's none of the above, we assume it's the index (About) page
-    const isAbout = !isResearch && !isPosts && !isFun;
-
-    const getStyle = (isActive) => isActive 
-      ? 'text-decoration: underline; text-underline-offset: 6px; color: inherit; opacity: 1; font-weight: bold;' 
-      : 'text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;';
-
-    this.innerHTML = `
-      <header>
-        <a href="${p}index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 2rem;">
-          <h1 style="margin: 0; font-family: ui-serif, Georgia, serif; font-size: 1.5rem;">Mathew Alex</h1>
-        </a>
-        <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-          <a href="${p}index.html" style="${getStyle(isAbout)}" onmouseover="this.style.opacity=1" onmouseout="if(!${isAbout}) this.style.opacity=0.6">About</a>
-          <a href="${p}Research.html" style="${getStyle(isResearch)}" onmouseover="this.style.opacity=1" onmouseout="if(!${isResearch}) this.style.opacity=0.6">Research</a>
-          <a href="${p}Posts.html" style="${getStyle(isPosts)}" onmouseover="this.style.opacity=1" onmouseout="if(!${isPosts}) this.style.opacity=0.6">Posts</a>
-          <a href="${p}Fun.html" style="${getStyle(isFun)}" onmouseover="this.style.opacity=1" onmouseout="if(!${isFun}) this.style.opacity=0.6">Interests</a>
-        </nav>
-      </header>
-    `;
-  }
-}
-customElements.define('site-header', SiteHeader);
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {

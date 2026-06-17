@@ -135,18 +135,57 @@ def build_site():
     with open(template_path, 'r') as f:
         template = f.read()
 
-    # Process all .md files in the content folder
+    # First pass: Collect all pages for the dynamic navbar
+    pages = []
+    for md_file in glob.glob(os.path.join(content_dir, '*.md')):
+        metadata, _ = parse_markdown(md_file)
+        title = metadata.get('title', 'Untitled')
+        # Use 'About' instead of 'About me' for the navbar for brevity if desired, 
+        # but let's stick to the title. We'll rename it later if needed.
+        if title == "About me":
+            title = "About"
+        output_filename = metadata.get('output', os.path.basename(md_file).replace('.md', '.html'))
+        pages.append({'title': title, 'output': output_filename})
+
+    # Sort pages: index.html first, Research second, Fun third, others last.
+    order = {'index.html': 0, 'Research.html': 1, 'Fun.html': 2}
+    pages.sort(key=lambda x: order.get(x['output'], 99))
+
+    # Second pass: Process and build each page
     for md_file in glob.glob(os.path.join(content_dir, '*.md')):
         metadata, content = parse_markdown(md_file)
         
         title = metadata.get('title', 'Untitled')
         output_filename = metadata.get('output', os.path.basename(md_file).replace('.md', '.html'))
         
+        # Build dynamic navbar
+        nav_links = []
+        for p in pages:
+            is_active = (p['output'] == output_filename)
+            if is_active:
+                style = "text-decoration: underline; text-underline-offset: 6px; color: inherit; opacity: 1; font-weight: bold;"
+                hover_out = ""
+            else:
+                style = "text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;"
+                hover_out = "this.style.opacity=0.6"
+            nav_links.append(f'<a href="{p["output"]}" style="{style}" onmouseover="this.style.opacity=1" onmouseout="{hover_out}">{p["title"]}</a>')
+            
+        nav_links_str = "\\n          ".join(nav_links)
+        navbar_html = f'''<header>
+        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 2rem;">
+          <h1 style="margin: 0; font-family: ui-serif, Georgia, serif; font-size: 1.5rem;">Mathew Alex</h1>
+        </a>
+        <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
+          {nav_links_str}
+        </nav>
+      </header>'''
+        
         # Convert Markdown to HTML
         html_content = md_to_html(content)
         
         # Inject into template
         final_html = template.replace('{{ TITLE }}', title)
+        final_html = final_html.replace('<site-header></site-header>', navbar_html)
         final_html = final_html.replace('{{ CONTENT }}', html_content)
         
         # Save output
