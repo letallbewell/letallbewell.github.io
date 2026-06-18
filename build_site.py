@@ -173,7 +173,7 @@ def build_site():
         nav_links_str = "\n          ".join(nav_links)
         navbar_html = f'''<header>
         <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 2rem;">
-          <h1 style="margin: 0; font-family: ui-serif, Georgia, serif; font-size: 1.5rem;">Mathew Alex</h1>
+          <h1 style="margin: 0; font-family: ui-monospace, monospace; font-size: 1.5rem;">Mathew Alex</h1>
         </a>
         <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
           {nav_links_str}

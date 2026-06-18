@@ -10,9 +10,7 @@ output: Fun.html
 ::: row
 
 ::: column
-I am a massive fan of all flying things, especially birds. I am constantly pursuing the imitatation of flight on a budget. 
-I built a remote-controlled aircraft adhering to the bare minimum for sustained flight and control. 
-I dare to call this one of the most affordable remote-controlled aircraft ever built; the total cost is approximately the price of a brushless motor and a Lithium-Polymer battery. The control signals are transmitted using RF modules-- certainly not a reliable way to control the plane, but it gets the job done.
+I am a massive fan of all flying things, especially birds. I am constantly pursuing the imitation of flight on a budget. <br>I built a remote-controlled aircraft adhering to the bare minimum for sustained flight and control. <br>I dare to call this one of the most affordable remote-controlled aircraft ever built; the total cost is approximately the price of a brushless motor and a Lithium-Polymer battery. The control signals are transmitted using RF modules-- certainly not a reliable way to control the plane, but it gets the job done.
 :::
 
 ::: column
@@ -25,7 +23,7 @@ I dare to call this one of the most affordable remote-controlled aircraft ever b
 
 ### Drawings
 
-I like to draw in notebooks, it relieves stress.
+I like to draw in notebooks; it relieves stress.
 
 @[gallery](Drawings)
 
@@ -35,9 +33,7 @@ I like to draw in notebooks, it relieves stress.
 
 ### Make Chocolate from Scratch
 
-I like chocolate, mainly because of its chemical richness.
-Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. 
-I learned how to make chocolate from scratch and it is well orth the effort.
+I like chocolate, mainly because of its chemical richness.<br>Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. <br>I learned how to make chocolate from scratch and it is well worth the effort.
 
 @[gallery](Chocolate)
 
