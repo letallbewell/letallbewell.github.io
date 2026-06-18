@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate Table of Contents
     const tocList = document.getElementById('toc-list');
     if (tocList) {
-        // Find all h2, h3, and h4 elements within .toc-content
-        const headers = document.querySelectorAll('.toc-content h2, .toc-content h3, .toc-content h4');
+        // Find all h2 and h3 elements within .toc-content
+        const headers = document.querySelectorAll('.toc-content h2, .toc-content h3');
         
         headers.forEach(header => {
             // Clone the header to extract text without the Github button
