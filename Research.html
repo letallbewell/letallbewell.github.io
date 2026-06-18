@@ -66,13 +66,13 @@
 
 <h3>Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</h3>
 
-<p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem states that symmetries that preserve the action integral map one to one to conservation laws. Often what does not change (the conserved quantities) give us more insight when we model what does change (the fields). Most fundamental physics equations are conservation laws.</p>
+<p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem states that symmetries that preserve the action integral map one to one to conservation laws. Often what does not change (the conserved quantities) gives us more insight when we model what does change (the fields). Most fundamental physics equations are conservation laws.</p>
 
 <p>My MSc thesis involved computing the point symmetries and conservation laws (via Noether's theorem) of the exact equations of motion of an elastic string. The literature on this topic can be sparse and confusing. But simply put, the answer is not the linear wave equation. When we enforce the physics principles for an elastic string, the final equation takes the form</p>
 
 <p>$$ \partial_t^2 \vec{r}(x,t) = \partial_x \left( T (\lambda) \, \widehat{\partial_x \vec{r}} \right)$$<br>where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) and which starts at arc-length \( x \) on the reference configuration (can be flat or curved), \( T(\lambda) \) is the tension as a function of the stretch \( \lambda = |\partial_x \vec{r}| - 1 \), and \( \widehat{\partial_x \vec{r}} \) is the unit tangent vector in the current configuration.</p>
 
-<p>For detailed derivations of the string equation, its characteristic curves, the symmetries and the symmetries and conservation laws admitted by this equation along with their physical interpretations in my thesis:</p>
+<p>For detailed derivations of the string equation, its characteristic curves, and the symmetries and conservation laws admitted by this equation along with their physical interpretations, see my thesis:</p>
 
 <h4><a href="https://brocku.scholaris.ca/items/a619876b-5789-464c-a70a-cfbc7670ab16">Nonlinear Wave Equation for an Elastic String: Derivation, Symmetries, and Conserved Quantities</a>, Mathew Alex, 2025.</h4>
 
@@ -171,9 +171,9 @@
 
 <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
-<p>Ordinary matter cannot aggregate gravitationally to form structures due to immense radiation pressure until the universe cools down considerably. However, dark matter interacts exclusive via gravity. This property allows it to form bound structures in the early universe, effectively creating gravitational potential wells for ordinary matter to fall in later when the universe cools down.</p>
+<p>Ordinary matter cannot aggregate gravitationally to form structures due to immense radiation pressure until the universe cools down considerably. However, dark matter interacts exclusively via gravity. This property allows it to form bound structures in the early universe, effectively creating gravitational potential wells for ordinary matter to fall in later when the universe cools down.</p>
 
-<p>Understanding the nature of primordial fluctuations—-the seed of all structures in the universe—-is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation codes, such as <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connect these early fluctuations to present-day large-scale dark matter structure.</p>
+<p>Understanding the nature of primordial fluctuations—-the seed of all structures in the universe—-is a fundamental problem in modern physics. A primary tool for studying this evolution is N-body simulation, such as <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-II</a>, which connect these early fluctuations to present-day large-scale dark matter structure.</p>
 
 <!-- <b>Ongoing Work:</b> While standard cosmological simulations rely on tree-code approximations to handle vast numbers of particles efficiently, I am trying to develop a full, unapproximated \(O(N^2)\) direct force computation. By heavily parallelizing the gravitational interactions using CUDA, our goal is to eliminate approximation errors entirely and publish the results.
  -->
