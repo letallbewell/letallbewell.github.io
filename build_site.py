@@ -172,9 +172,12 @@ def build_site():
             
         nav_links_str = "\n          ".join(nav_links)
         navbar_html = f'''<header>
-        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 2rem;">
+        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 0.5rem;">
           <h1 style="margin: 0; font-family: ui-monospace, monospace; font-size: 1.5rem;">Mathew Alex</h1>
         </a>
+        <div style="margin-bottom: 2rem;">
+          <mark style="font-size: 0.8rem;"><b>In progress</b></mark>
+        </div>
         <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
           {nav_links_str}
         </nav>

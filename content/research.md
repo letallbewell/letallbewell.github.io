@@ -3,9 +3,6 @@ title: Research
 output: Research.html
 ---
 
-::: in-progress
-**In progress**
-:::
 
 @[toc] 
 
