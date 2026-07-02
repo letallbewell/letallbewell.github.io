@@ -37,11 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const a = document.createElement('a');
             a.href = '#' + header.id;
             a.textContent = text;
-            a.style.textDecoration = 'none';
-            a.style.color = 'inherit';
-            a.style.opacity = '0.6';
-            a.onmouseover = () => a.style.opacity = '1';
-            a.onmouseout = () => a.style.opacity = '0.6';
+            a.classList.add('toc-link');
 
             // Indent based on header level
             if (header.tagName === 'H3') {
@@ -56,5 +52,34 @@ document.addEventListener('DOMContentLoaded', () => {
             li.appendChild(a);
             tocList.appendChild(li);
         });
+
+        // Scrollspy logic
+        const tocLinks = tocList.querySelectorAll('.toc-link');
+        const scrollSpy = () => {
+            let currentId = '';
+            // Find the last header that is at or above the top of the viewport
+            headers.forEach(header => {
+                const rect = header.getBoundingClientRect();
+                if (rect.top <= 100) { 
+                    currentId = header.id;
+                }
+            });
+
+            // If we are at the very top, highlight the first section
+            if (!currentId && headers.length > 0) {
+                currentId = headers[0].id;
+            }
+
+            tocLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + currentId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', scrollSpy);
+        scrollSpy(); // Initial call
     }
 });
