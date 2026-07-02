@@ -127,8 +127,8 @@ header {
     position: sticky;
     top: 5rem;
     font-size: 0.875rem;
-    border-left: 1px solid var(--border-color);
-    padding-left: 1rem;
+    border-right: 1px solid var(--border-color);
+    padding-right: 1.5rem;
 }
 .toc ul { list-style: none; padding: 0; margin: 0; }
 .toc li { margin-bottom: 0.5em; }
@@ -234,9 +234,9 @@ header {
         flex: none;
         width: 100%;
         position: static;
-        border-left: none;
+        border-right: none;
         border-bottom: 1px solid var(--border-color);
-        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
