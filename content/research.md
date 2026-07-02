@@ -148,7 +148,7 @@ A particle cloud of \( N = 1000 \) points starting about \( [1, 1, 1] \) is inte
 
 Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  [Principles of Quantum Mechanics, David Skinner](http://www.damtp.cam.ac.uk/user/dbs26/PQM.html)) is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.
 
-In one dimension, the second derivative can be approximated as a difference, and the Schrodinger equation equates to a matrix eigenvalue problem after discretizing the potential. This formalism can easily be extended to three dimensions using tensor products to solve the Hydrogen atom and the three-dimensional harmonic oscillator:
+In one dimension, the second derivative can be approximated as a difference, and the Schrodinger equation equates to a matrix eigenvalue problem after discretizing the potential. This formalism can easily be extended to higher dimensions using tensor products to solve the Hydrogen atom and the two-dimensional harmonic oscillator:
 
 ::: image-grid
 ![Hydrogen Atom](images/Hydrogen_Atom.jpeg)
