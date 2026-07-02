@@ -23,7 +23,7 @@ I am a massive fan of all flying things, especially birds. I am constantly pursu
 
 ### Drawings
 
-I like to draw in notebooks; it relieves stress.
+I have drawn in notebooks over the years; it relieves stress, even if some of the drawings are a bit silly.
 
 @[gallery](Drawings)
 
