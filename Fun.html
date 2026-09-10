@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathew Alex | Interests</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
     <link rel="icon" href="favicon.ico">
 
     <!-- Open Graph Meta Tags for link sharing -->
@@ -15,13 +14,6 @@
     <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
     <meta property="og:url" content="https://letallbewell.github.io/">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DPXR8GLHEJ');
-    </script>
     <!-- LaTeX Support via MathJax -->
     <script>
       MathJax = {
@@ -33,55 +25,38 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <script src="components.js"></script>
-</head>
+    </head>
 
 <body>
-  <div class="main-content">
-    <header>
-        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 0.5rem;">
-          <h1 style="margin: 0; font-family: ui-monospace, monospace; font-size: 1.5rem;">Mathew Alex</h1>
-        </a>
-        <div style="margin-bottom: 2rem;">
-          <mark style="font-size: 0.8rem;"><b>In progress</b></mark>
-        </div>
-        <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-          <a href="index.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">About</a>
-          <a href="Research.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">Research</a>
-          <a href="Fun.html" style="text-decoration: underline; text-underline-offset: 6px; color: inherit; opacity: 1; font-weight: bold;" onmouseover="this.style.opacity=1" onmouseout="">Interests</a>
-        </nav>
-      </header>
-    <div class="right-pane">
-        <div class="toc-container">
-<nav class="toc">
+  <header>
+    <h1>Mathew Alex</h1>
+    <nav class="main-nav">
+        <a href="index.html">About</a>
+        <a href="Research.html">Research</a>
+        <a href="Fun.html" class="active">Interests</a>
+    </nav>
+</header>
+    <nav class="toc">
 <b>Contents</b>
-<ul id="toc-list"></ul>
+<ul>
+    <li><a href="#make-and-fly-cheap-rc-airplanes">Make and Fly Cheap RC Airplanes</a></li>
+    <li><a href="#drawings">Drawings</a></li>
+    <li><a href="#photos">Photos</a></li>
+    <li><a href="#make-chocolate-from-scratch">Make Chocolate from Scratch</a></li>
+    <li><a href="#music">Music</a></li>
+</ul>
 </nav>
-<div class="toc-content">
 
-<h3>Make and Fly Cheap RC Airplanes</h3>
-
-<div class="row">
-
-<div class="column">
+<h3 id="make-and-fly-cheap-rc-airplanes">Make and Fly Cheap RC Airplanes</h3>
 
 <p>I am a massive fan of all flying things, especially birds. I am constantly pursuing the imitation of flight on a budget. <br>I built a remote-controlled aircraft adhering to the bare minimum for sustained flight and control. <br>I dare to call this one of the most affordable remote-controlled aircraft ever built; the total cost is approximately the price of a brushless motor and a Lithium-Polymer battery. The control signals are transmitted using RF modules-- certainly not a reliable way to control the plane, but it gets the job done.</p>
 
-</div>
-
-<div class="column">
-
-<div class="text-center">
-
+<figure>
 <img src="images/RC_Airplane.jpg" alt="RC Airplane">
+<figcaption>Remote-controlled aircraft adhering to the bare minimum for flight and control.</figcaption>
+</figure>
 
-</div>
-
-</div>
-
-</div>
-
-<h3>Drawings</h3>
+<h3 id="drawings">Drawings</h3>
 
 <p>I have drawn in notebooks over the years; it relieves stress, even if some of the drawings are a bit silly.</p>
 
@@ -139,7 +114,7 @@
       <!-- DRAWINGS_END -->
 </div>
 
-<h3>Photos</h3>
+<h3 id="photos">Photos</h3>
 
 <div id="photographs-gallery">
 <!-- PHOTOGRAPHS_START -->
@@ -262,7 +237,7 @@
       <!-- PHOTOGRAPHS_END -->
 </div>
 
-<h3>Make Chocolate from Scratch</h3>
+<h3 id="make-chocolate-from-scratch">Make Chocolate from Scratch</h3>
 
 <p>I like chocolate, mainly because of its chemical richness.<br>Unlike vanilla, chocolate's taste does not come from a single molecule. The flavor, unlocked by fermentation and roasting, comes from a symphony of many molecules. <br>I learned how to make chocolate from scratch and it is well worth the effort.</p>
 
@@ -284,7 +259,7 @@
       <!-- CHOCOLATE_END -->
 </div>
 
-<h3>Music</h3>
+<h3 id="music">Music</h3>
 
 <p>Despite trying on my own, I could not master the piano. I know in my heart I am destined to play it, and I will work towards that goal. For now, here is my GarageBand experiment from many years ago, <i>Her</i>. I believe despair is a great sin; overcome the cringe phase.</p>
 
@@ -295,10 +270,6 @@
 <a href="https://soundcloud.com/mathew-alex-238381510">Mathew Alex</a> · <a href="https://soundcloud.com/mathew-alex-238381510/her/s-7kQaNGfNBoG">Her</a>
 
 </div>
-</div>
-</div>
-        <site-footer></site-footer>   
-    </div>
-  </div>
-</body>
+<footer><p>&copy; 2026 Mathew Alex</p></footer>   
+    </body>
 </html>

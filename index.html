@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathew Alex | About me</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
     <link rel="icon" href="favicon.ico">
 
     <!-- Open Graph Meta Tags for link sharing -->
@@ -15,13 +14,6 @@
     <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
     <meta property="og:url" content="https://letallbewell.github.io/">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DPXR8GLHEJ');
-    </script>
     <!-- LaTeX Support via MathJax -->
     <script>
       MathJax = {
@@ -33,31 +25,23 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <script src="components.js"></script>
-</head>
+    </head>
 
 <body>
-  <div class="main-content">
-    <header>
-        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 0.5rem;">
-          <h1 style="margin: 0; font-family: ui-monospace, monospace; font-size: 1.5rem;">Mathew Alex</h1>
-        </a>
-        <div style="margin-bottom: 2rem;">
-          <mark style="font-size: 0.8rem;"><b>In progress</b></mark>
-        </div>
-        <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-          <a href="index.html" style="text-decoration: underline; text-underline-offset: 6px; color: inherit; opacity: 1; font-weight: bold;" onmouseover="this.style.opacity=1" onmouseout="">About</a>
-          <a href="Research.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">Research</a>
-          <a href="Fun.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">Interests</a>
-        </nav>
-      </header>
-    <div class="right-pane">
-        <p><i>Physics student, previously machine learning engineer, trying hard to be useful.</i></p>
+  <header>
+    <h1>Mathew Alex</h1>
+    <nav class="main-nav">
+        <a href="index.html" class="active">About</a>
+        <a href="Research.html">Research</a>
+        <a href="Fun.html">Interests</a>
+    </nav>
+</header>
+    <p><i>Physics student, previously machine learning engineer, trying hard to be useful.</i></p>
 
 <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-end; margin: 3em 0;">
     <img src="images/Profile.jpg" alt="Profile picture" class="profile-img" style="width: 200px;">
     
-    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-weight: 600; font-family: ui-monospace, monospace; margin-bottom: 0.5rem; max-width: 380px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-weight: 600; margin-bottom: 0.5rem; max-width: 380px;">
       <a href="https://github.com/letallbewell" target="_blank" style="text-decoration: none; white-space: nowrap;">[ GitHub ]</a>
       <a href="https://scholar.google.com/citations?user=0haEg2cAAAAJ&hl=en" target="_blank" style="text-decoration: none; white-space: nowrap;">[ Google Scholar ]</a>
       <a href="https://drive.google.com/file/d/1hDcspyUNbRTRUlN4uVqHvF6GRQ5F1dBW/view?usp=sharing" target="_blank" style="text-decoration: none; white-space: nowrap;">[ CV ]</a>
@@ -67,11 +51,18 @@
 </div>
 
 <br>
-<div style="line-height: 1.6; max-width: 65ch;">
+<blockquote>
+  Beat, happy stars, timing with things below,<br>
+  Beat with my heart more blest than heart can tell,<br>
+  Blest, but for some dark undercurrent woe<br>
+  That seems to draw—but it shall not be so:<br>
+  Let all be well, be well.
+  <cite>— Alfred, Lord Tennyson, <i>Maud</i></cite>
+</blockquote>
+
+<div style="line-height: 1.6; max-width: 65ch; margin-top: 2rem;">
   <p><i>"Human endeavor should be limitless; we are built to be spent. A great love is a flawed love. I feel full, and my adventure is plenty."</i></p>
 </div>
-        <site-footer></site-footer>   
-    </div>
-  </div>
-</body>
+        <footer><p>&copy; 2026 Mathew Alex</p></footer>   
+    </body>
 </html>

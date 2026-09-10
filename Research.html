@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathew Alex | Research</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
     <link rel="icon" href="favicon.ico">
 
     <!-- Open Graph Meta Tags for link sharing -->
@@ -15,13 +14,6 @@
     <meta property="og:image" content="https://letallbewell.github.io/images/Photo.jpeg">
     <meta property="og:url" content="https://letallbewell.github.io/">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPXR8GLHEJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-DPXR8GLHEJ');
-    </script>
     <!-- LaTeX Support via MathJax -->
     <script>
       MathJax = {
@@ -33,41 +25,41 @@
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <script src="components.js"></script>
-</head>
+    </head>
 
 <body>
-  <div class="main-content">
-    <header>
-        <a href="index.html" style="text-decoration: none; color: inherit; display: block; margin-bottom: 0.5rem;">
-          <h1 style="margin: 0; font-family: ui-monospace, monospace; font-size: 1.5rem;">Mathew Alex</h1>
-        </a>
-        <div style="margin-bottom: 2rem;">
-          <mark style="font-size: 0.8rem;"><b>In progress</b></mark>
-        </div>
-        <nav style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.875rem;">
-          <a href="index.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">About</a>
-          <a href="Research.html" style="text-decoration: underline; text-underline-offset: 6px; color: inherit; opacity: 1; font-weight: bold;" onmouseover="this.style.opacity=1" onmouseout="">Research</a>
-          <a href="Fun.html" style="text-decoration: none; color: inherit; opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.6">Interests</a>
-        </nav>
-      </header>
-    <div class="right-pane">
-        <div class="toc-container">
-<nav class="toc">
+  <header>
+    <h1>Mathew Alex</h1>
+    <nav class="main-nav">
+        <a href="index.html">About</a>
+        <a href="Research.html" class="active">Research</a>
+        <a href="Fun.html">Interests</a>
+    </nav>
+</header>
+    <nav class="toc">
 <b>Contents</b>
-<ul id="toc-list"></ul>
+<ul>
+<li><a href="#research-publications">Research & Publications</a></li>
+    <li><a href="#symmetries-and-conservation-laws-of-nonlinear-wave-equations-from-continuum-mechanics">Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</a></li>
+    <li><a href="#patent-landscape-study-of-quantum-technologies">Patent Landscape Study of Quantum Technologies</a></li>
+<li><a href="#computational-projects">Computational Projects</a></li>
+    <li><a href="#fluid-dynamics-github">Fluid Dynamics Github</a></li>
+    <li><a href="#tensor-networks-renormalization-and-phase-transitions">Tensor Networks, Renormalization, and Phase Transitions</a></li>
+    <li><a href="#cosmology">Cosmology</a></li>
+    <li><a href="#chaos-in-the-lorenz-attractor-system-github">Chaos in the Lorenz Attractor System Github</a></li>
+    <li><a href="#quantum-mechanics-github">Quantum Mechanics Github</a></li>
+</ul>
 </nav>
-<div class="toc-content">
 
-<h2>Research & Publications</h2>
+<h2 id="research-publications">Research & Publications</h2>
 
-<h3>Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</h3>
+<h3 id="symmetries-and-conservation-laws-of-nonlinear-wave-equations-from-continuum-mechanics">Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</h3>
 
 <p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem states that symmetries that preserve the action integral map one to one to conservation laws. Often what does not change (the conserved quantities) gives us more insight when we model what does change (the fields). Most fundamental physics equations are conservation laws.</p>
 
 <p>My MSc thesis involved computing the point symmetries and conservation laws (via Noether's theorem) of the exact equations of motion of an elastic string. The literature on this topic can be sparse and confusing. But simply put, the answer is not the linear wave equation. When we enforce the physics principles for an elastic string, the final equation takes the form</p>
 
-<p>$$ \partial_t^2 \vec{r}(x,t) = \partial_x \left( T (\lambda) \, \widehat{\partial_x \vec{r}} \right)$$<br>where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) that starts at arc-length \( x \) on the reference configuration (can be flat or curved), \( T(\lambda) \) is the tension as a function of the stretch \( \lambda = |\partial_x \vec{r}| - 1 \), and \( \widehat{\partial_x \vec{r}} \) is the unit tangent vector in the current configuration.</p>
+<p>$$ \partial_t^2 \vec{r}(x,t) = \partial_x \left( T (\lambda) \, \widehat{\partial_x \vec{r}}(x,t) \right)$$<br>where \( \vec{r}(x,t) \) is the position of a string element at time \( t \) that starts at arc-length \( x \) on the reference configuration (can be flat or curved), \( T(\lambda) \) is the tension as a function of the stretch \( \lambda = |\partial_x \vec{r}(x,t)| - 1 \), and \( \widehat{\partial_x \vec{r}}(x,t) \) is the unit tangent vector in the current configuration.</p>
 
 <p>For detailed derivations of the string equation, its characteristic curves, and the symmetries and conservation laws admitted by this equation along with their physical interpretations, see my thesis:</p>
 
@@ -75,7 +67,7 @@
 
 <p>Extending this equation to two dimensions to describe the motion of a membrane (like a piece of cloth) turns out to be even more tricky. More on that in the near future.</p>
 
-<h3>Patent Landscape Study of Quantum Technologies</h3>
+<h3 id="patent-landscape-study-of-quantum-technologies">Patent Landscape Study of Quantum Technologies</h3>
 
 <p>In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.</p>
 
@@ -85,15 +77,13 @@
 
 <h4>Taxonomy of the technologies <a href="https://search2.relecura.com/index.php/taxonomy/loadPublicTaxonomy/de8b3d26-651f-11eb-919d-023ada72e4ef">(Interactive Version)</a></h4>
 
-<img src="images/Quantum_Technologies_Taxonomy.png" alt="Quantum Technologies Taxonomy" class="center diagram">
-
 </div>
 
 <hr>
 
-<h2>Computational Projects</h2>
+<h2 id="computational-projects">Computational Projects</h2>
 
-<h3>Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h3 id="fluid-dynamics-github">Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
 
 <p>The Navier-Stokes equations (mass, momentum, and energy continuity equations for fluids) can describe phenomena ranging from a stirred cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Numerical algorithms require massive parallelization to be of use and there are pesky numerical instabilities to deal with.</p>
 
@@ -121,7 +111,7 @@
 
 </div>
 
-<h3>Tensor Networks, Renormalization, and Phase Transitions</h3>
+<h3 id="tensor-networks-renormalization-and-phase-transitions">Tensor Networks, Renormalization, and Phase Transitions</h3>
 
 <p>I did an independent research project in statistical mechanics that explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:</p>
 
@@ -164,7 +154,7 @@
 
 <p>- F. Schwabl and W.D. Brewer. <i>Statistical Mechanics</i>. Advanced Texts in Physics. Springer Berlin Heidelberg, 2006. ISBN: 9783540323433.<br>- Humphrey J. Maris and Leo P. Kadanoff. "Teaching the renormalization group". In: <i>American Journal of Physics</i> 46.6 (1978), pp. 652–657.</p>
 
-<h3>Cosmology</h3>
+<h3 id="cosmology">Cosmology</h3>
 
 <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
@@ -177,7 +167,7 @@
 
 <iframe width="100%"  class="center" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3>Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h3 id="chaos-in-the-lorenz-attractor-system-github">Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
 
 <p>The Lorenz system arose in a simplified description of atmospheric convection and is, probably, the best-known example of a chaotic system. This system is defined by the following differential equations:</p>
 
@@ -197,7 +187,7 @@
 
 <iframe width="100%"  class="center" src="https://www.youtube.com/embed/RIgKHnjR-XE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3>Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h3 id="quantum-mechanics-github">Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
 
 <p>Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner</a>) is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.</p>
 
@@ -209,10 +199,6 @@
 <img src="images/Harmonic_Oscillator.png" alt="Harmonic Oscillator">
 
 </div>
-</div>
-</div>
-        <site-footer></site-footer>   
-    </div>
-  </div>
-</body>
+<footer><p>&copy; 2026 Mathew Alex</p></footer>   
+    </body>
 </html>
