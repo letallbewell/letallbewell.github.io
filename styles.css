@@ -58,6 +58,58 @@ iframe {
     aspect-ratio: 16 / 9;
 }
 
+/* Profile section */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 !important;
+}
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.profile-links a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.profile-links a:hover {
+    text-decoration: underline;
+}
+
+/* GitHub tag in section headers */
+.github-badge {
+    float: right;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    margin-top: 0.3rem;
+    color: var(--text-color);
+}
+
+.github-badge:hover {
+    text-decoration: none;
+    background-color: var(--border-color);
+}
+
 header {
     margin-bottom: 2rem;
 }

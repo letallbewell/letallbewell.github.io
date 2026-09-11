@@ -39,21 +39,17 @@
     <nav class="toc">
 <b>Contents</b>
 <ul>
-<li><a href="#research-publications">Research & Publications</a></li>
-    <li><a href="#symmetries-and-conservation-laws-of-nonlinear-wave-equations-from-continuum-mechanics">Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</a></li>
-    <li><a href="#patent-landscape-study-of-quantum-technologies">Patent Landscape Study of Quantum Technologies</a></li>
-<li><a href="#computational-projects">Computational Projects</a></li>
-    <li><a href="#fluid-dynamics-github">Fluid Dynamics Github</a></li>
-    <li><a href="#tensor-networks-renormalization-and-phase-transitions">Tensor Networks, Renormalization, and Phase Transitions</a></li>
-    <li><a href="#cosmology">Cosmology</a></li>
-    <li><a href="#chaos-in-the-lorenz-attractor-system-github">Chaos in the Lorenz Attractor System Github</a></li>
-    <li><a href="#quantum-mechanics-github">Quantum Mechanics Github</a></li>
+    <li><a href="#nonlinear-wave-equations">Symmetries and Conservation Laws of Nonlinear Wave Equations</a></li>
+    <li><a href="#quantum-technologies">Patent Landscape Study of Quantum Technologies</a></li>
+    <li><a href="#fluid-dynamics">Fluid Dynamics (Lattice Boltzmann Method)</a></li>
+    <li><a href="#tensor-networks">Tensor Networks, Renormalization, and Phase Transitions</a></li>
+    <li><a href="#cosmology">Cosmology & N-Body Simulations</a></li>
+    <li><a href="#lorenz-system">Chaos in the Lorenz Attractor System</a></li>
+    <li><a href="#quantum-mechanics">Quantum Mechanics: Finite Difference Solutions</a></li>
 </ul>
 </nav>
 
-<h2 id="research-publications">Research & Publications</h2>
-
-<h3 id="symmetries-and-conservation-laws-of-nonlinear-wave-equations-from-continuum-mechanics">Symmetries and Conservation Laws of Nonlinear Wave Equations from Continuum Mechanics</h3>
+<h2 id="nonlinear-wave-equations">Symmetries and Conservation Laws of Nonlinear Wave Equations</h2>
 
 <p>Symmetries of a PDE are transformations that map solutions to solutions. Noether's theorem states that symmetries that preserve the action integral map one to one to conservation laws. Often what does not change (the conserved quantities) gives us more insight when we model what does change (the fields). Most fundamental physics equations are conservation laws.</p>
 
@@ -67,7 +63,7 @@
 
 <p>Extending this equation to two dimensions to describe the motion of a membrane (like a piece of cloth) turns out to be even more tricky. More on that in the near future.</p>
 
-<h3 id="patent-landscape-study-of-quantum-technologies">Patent Landscape Study of Quantum Technologies</h3>
+<h2 id="quantum-technologies">Patent Landscape Study of Quantum Technologies</h2>
 
 <p>In 2021, I wrote a patent landscape study report for <a href="https://relecura.com/">Relecura Technologies</a>, analyzing around 50k patents in quantum technologies using natural language processing tools, aimed at policymakers and investors.</p>
 
@@ -79,11 +75,7 @@
 
 </div>
 
-<hr>
-
-<h2 id="computational-projects">Computational Projects</h2>
-
-<h3 id="fluid-dynamics-github">Fluid Dynamics <button onclick="location.href='https://github.com/letallbewell/Lattice-Boltzmann'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h2 id="fluid-dynamics">Fluid Dynamics (Lattice Boltzmann Method) <a href="https://github.com/letallbewell/Lattice-Boltzmann" class="github-badge">GitHub ↗</a></h2>
 
 <p>The Navier-Stokes equations (mass, momentum, and energy continuity equations for fluids) can describe phenomena ranging from a stirred cup of coffee to the earth's climate. Predicting the fluid flow is challenging even with the complete knowledge of initial conditions. Numerical algorithms require massive parallelization to be of use and there are pesky numerical instabilities to deal with.</p>
 
@@ -111,11 +103,11 @@
 
 </div>
 
-<h3 id="tensor-networks-renormalization-and-phase-transitions">Tensor Networks, Renormalization, and Phase Transitions</h3>
+<h2 id="tensor-networks">Tensor Networks, Renormalization, and Phase Transitions</h2>
 
 <p>I did an independent research project in statistical mechanics that explores how macroscopic physics emerges from microscopic rules, specifically analyzing phase transitions in the 2D Ising model. I utilize three distinct computational and analytical approaches to evaluate the partition function and system thermodynamics:</p>
 
-<h4>Tensor Network Contractions <button onclick="location.href='https://github.com/letallbewell/Tensor-Network-Contraction'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h4>
+<h3>Tensor Network Contractions <a href="https://github.com/letallbewell/Tensor-Network-Contraction" class="github-badge">GitHub ↗</a></h3>
 
 <p>Representing the partition function as a Tensor Network (TN), the calculation changes to a series of tensor contractions. Here I test a TN contraction library I wrote from scratch on the 2D Ising model.</p>
 
@@ -127,7 +119,7 @@
 
 <img src="images/TN_E&Cv.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
-<h4>Monte-Carlo Simulations</h4>
+<h3>Monte-Carlo Simulations</h3>
 
 <p>We drive random spin configurations toward equilibrium to sample states and calculate expected energy and magnetization.</p>
 
@@ -136,7 +128,7 @@
 <img src="images/MC_Samples.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 <img src="images/MC_Results.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
-<h4>Renormalization Group (RG) Methods</h4>
+<h3>Renormalization Group (RG) Methods</h3>
 
 <p>Here we numerically (easily done analytically for the 1D model) analyze the flow of effective coupling constants through real-space decimation to estimate the number of phases.</p>
 
@@ -154,7 +146,7 @@
 
 <p>- F. Schwabl and W.D. Brewer. <i>Statistical Mechanics</i>. Advanced Texts in Physics. Springer Berlin Heidelberg, 2006. ISBN: 9783540323433.<br>- Humphrey J. Maris and Leo P. Kadanoff. "Teaching the renormalization group". In: <i>American Journal of Physics</i> 46.6 (1978), pp. 652–657.</p>
 
-<h3 id="cosmology">Cosmology</h3>
+<h2 id="cosmology">Cosmology & N-Body Simulations</h2>
 
 <img src="images/gadget_visualization.jpg" alt="Energy and Specific Heat Capacity" class="center diagram">
 
@@ -167,7 +159,7 @@
 
 <iframe width="100%"  class="center" src="https://www.youtube.com/embed/Dguvi2uA_KU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3 id="chaos-in-the-lorenz-attractor-system-github">Chaos in the Lorenz Attractor System <button onclick="location.href='https://github.com/letallbewell/Lorenz-System'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h2 id="lorenz-system">Chaos in the Lorenz Attractor System <a href="https://github.com/letallbewell/Lorenz-System" class="github-badge">GitHub ↗</a></h2>
 
 <p>The Lorenz system arose in a simplified description of atmospheric convection and is, probably, the best-known example of a chaotic system. This system is defined by the following differential equations:</p>
 
@@ -187,7 +179,7 @@
 
 <iframe width="100%"  class="center" src="https://www.youtube.com/embed/RIgKHnjR-XE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3 id="quantum-mechanics-github">Quantum Mechanics <button onclick="location.href='https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions'" type="button" style="float: right; font-size: 0.7em; margin-top: 0.2em;">Github</button></h3>
+<h2 id="quantum-mechanics">Quantum Mechanics: Finite Difference Solutions <a href="https://github.com/letallbewell/Shrodinger_Equation-Finite_Difference_Solutions" class="github-badge">GitHub ↗</a></h2>
 
 <p>Deriving the spectrum and the orbitals of the Hydrogen atom by applying the series solution method to the Schrodinger equation is a long process. The operator method (see section 6.2 of  <a href="http://www.damtp.cam.ac.uk/user/dbs26/PQM.html">Principles of Quantum Mechanics, David Skinner</a>) is also much work. We can use the finite difference approximation to get a feel for the solutions numerically.</p>
 
